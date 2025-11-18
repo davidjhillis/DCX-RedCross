@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover CX Product Documentation</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="admin/assets/theme-loader.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            // Semantic color tokens mapped to CSS variables
+            primary: {
+              50: 'rgb(var(--color-primary-50))',
+              100: 'rgb(var(--color-primary-100))',
+              200: 'rgb(var(--color-primary-200))',
+              300: 'rgb(var(--color-primary-300))',
+              400: 'rgb(var(--color-primary-400))',
+              500: 'rgb(var(--color-primary-500))',
+              600: 'rgb(var(--color-primary-600))',
+              700: 'rgb(var(--color-primary-700))',
+              800: 'rgb(var(--color-primary-800))',
+              900: 'rgb(var(--color-primary-900))',
+              950: 'rgb(var(--color-primary-950))',
+            },
+            accent: {
+              50: 'rgb(var(--color-accent-50))',
+              100: 'rgb(var(--color-accent-100))',
+              200: 'rgb(var(--color-accent-200))',
+              300: 'rgb(var(--color-accent-300))',
+              400: 'rgb(var(--color-accent-400))',
+              500: 'rgb(var(--color-accent-500))',
+              600: 'rgb(var(--color-accent-600))',
+              700: 'rgb(var(--color-accent-700))',
+              800: 'rgb(var(--color-accent-800))',
+              900: 'rgb(var(--color-accent-900))',
+              950: 'rgb(var(--color-accent-950))',
+            },
+            neutral: {
+              50: 'rgb(var(--color-neutral-50))',
+              100: 'rgb(var(--color-neutral-100))',
+              200: 'rgb(var(--color-neutral-200))',
+              300: 'rgb(var(--color-neutral-300))',
+              400: 'rgb(var(--color-neutral-400))',
+              500: 'rgb(var(--color-neutral-500))',
+              600: 'rgb(var(--color-neutral-600))',
+              700: 'rgb(var(--color-neutral-700))',
+              800: 'rgb(var(--color-neutral-800))',
+              900: 'rgb(var(--color-neutral-900))',
+              950: 'rgb(var(--color-neutral-950))',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Default theme CSS variables (purple/violet/gray) */
+    :root {
+      --color-primary-50: 250 245 255;
+      --color-primary-100: 243 232 255;
+      --color-primary-200: 233 213 255;
+      --color-primary-300: 216 180 254;
+      --color-primary-400: 192 132 252;
+      --color-primary-500: 168 85 247;
+      --color-primary-600: 147 51 234;
+      --color-primary-700: 126 34 206;
+      --color-primary-800: 107 33 168;
+      --color-primary-900: 88 28 135;
+      --color-primary-950: 59 7 100;
+      
+      --color-accent-50: 250 245 255;
+      --color-accent-100: 243 232 255;
+      --color-accent-200: 233 213 255;
+      --color-accent-300: 216 180 254;
+      --color-accent-400: 192 132 252;
+      --color-accent-500: 168 85 247;
+      --color-accent-600: 147 51 234;
+      --color-accent-700: 126 34 206;
+      --color-accent-800: 107 33 168;
+      --color-accent-900: 88 28 135;
+      --color-accent-950: 59 7 100;
+      
+      --color-neutral-50: 249 250 251;
+      --color-neutral-100: 243 244 246;
+      --color-neutral-200: 229 231 235;
+      --color-neutral-300: 209 213 219;
+      --color-neutral-400: 156 163 175;
+      --color-neutral-500: 107 114 128;
+      --color-neutral-600: 75 85 99;
+      --color-neutral-700: 55 65 81;
+      --color-neutral-800: 31 41 55;
+      --color-neutral-900: 17 24 39;
+      --color-neutral-950: 3 7 18;
+    }
+    
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-neutral-50 dark:bg-neutral-900">
+
+  <!-- HEADER - Clear, functional navigation -->
+  <header class="sticky top-0 z-50 bg-neutral-50 dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-700">
+    <div class="max-w-screen-2xl mx-auto px-6">
+      <div class="flex items-center h-16">
+        
+        <!-- Logo & Home Link -->
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+          <img src="admin/assets/discover-cx-logo.svg" alt="Discover CX" class="h-7 w-auto dark:hidden">
+          <img src="admin/assets/discover-cx-logo-white.svg" alt="Discover CX" class="h-7 w-auto hidden dark:block">
+          <span class="hidden sm:inline font-normal text-lg text-neutral-600 dark:text-neutral-400">Product Documentation</span>
+        </a>
+        
+        <!-- Primary Nav (Desktop - Centered with flex-grow) -->
+        <nav class="hidden md:flex items-center justify-center gap-6 flex-1">
+          <a href="#products" class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white font-medium">Products</a>
+          <a href="doc-page.html" class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white font-medium">Guides</a>
+          <a href="#" class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white font-medium">API Reference</a>
+          <a href="#support" class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white font-medium">Support</a>
+        </nav>
+        
+        <!-- Right: Actions (Search, Menu, Avatar) -->
+        <div class="flex items-center gap-3 md:ml-8 ml-auto">
+          <!-- Mobile Search Icon Button -->
+          <button id="mobile-search-btn" class="md:hidden p-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg">
+            <i data-lucide="search" class="w-6 h-6 text-neutral-600 dark:text-neutral-400"></i>
+          </button>
+          
+          <!-- Mobile Menu Button with Dropdown (next to avatar) -->
+          <div class="relative md:hidden">
+            <button id="mobile-menu-btn" class="p-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg">
+              <i data-lucide="menu" class="w-6 h-6 text-neutral-600 dark:text-neutral-400"></i>
+            </button>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden absolute right-0 top-full mt-2 w-64 bg-neutral-50 dark:bg-neutral-900 rounded-xl shadow-2xl border border-neutral-200 dark:border-neutral-700 z-50 py-2">
+              <nav class="py-2">
+                <a href="#products" class="flex items-center gap-3 px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+                  <i data-lucide="package" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+                  <span class="text-sm font-medium text-neutral-900 dark:text-white">Products</span>
+                </a>
+                <a href="doc-page.html" class="flex items-center gap-3 px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+                  <i data-lucide="book-open" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+                  <span class="text-sm font-medium text-neutral-900 dark:text-white">Guides</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+                  <i data-lucide="life-buoy" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+                  <span class="text-sm font-medium text-neutral-900 dark:text-white">Support</span>
+                </a>
+              </nav>
+            </div>
+          </div>
+          
+          <!-- User Avatar Dropdown -->
+          <div class="relative">
+            <button id="user-menu-btn" class="flex items-center gap-2 p-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary-600 to-pink-600 flex items-center justify-center text-white font-semibold text-sm">
+                JD
+              </div>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-600 dark:text-neutral-400 hidden sm:block"></i>
+            </button>
+            
+            <!-- Dropdown Menu -->
+            <div id="user-dropdown" class="hidden absolute right-0 mt-2 w-56 bg-neutral-50 dark:bg-neutral-800 rounded-xl shadow-2xl border border-neutral-200 dark:border-neutral-700 py-2 z-50">
+              <!-- User Info -->
+              <div class="px-4 py-3 border-b border-neutral-200 dark:border-neutral-700">
+                <p class="text-sm font-semibold text-neutral-900 dark:text-white">Jane Doe</p>
+                <p class="text-xs text-neutral-600 dark:text-neutral-400">jane.doe@company.com</p>
+              </div>
+              
+              <!-- Theme Selector -->
+              <div class="px-4 py-3 border-b border-neutral-200 dark:border-neutral-700">
+                <div class="flex items-center justify-between gap-2">
+                  <button id="theme-auto" class="flex-1 p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors" title="Auto">
+                    <i data-lucide="monitor" class="w-4 h-4 mx-auto text-neutral-600 dark:text-neutral-400"></i>
+                  </button>
+                  <button id="theme-light" class="flex-1 p-2 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 transition-colors" title="Light">
+                    <i data-lucide="sun" class="w-4 h-4 mx-auto text-yellow-600 dark:text-yellow-400"></i>
+                  </button>
+                  <button id="theme-dark" class="flex-1 p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors" title="Dark">
+                    <i data-lucide="moon" class="w-4 h-4 mx-auto text-neutral-600 dark:text-neutral-400"></i>
+                  </button>
+                </div>
+              </div>
+              
+              <!-- Menu Items -->
+              <div class="py-2">
+                <a href="user-profile.html" class="flex items-center gap-3 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+                  <i data-lucide="user" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+                  <span class="text-sm text-neutral-900 dark:text-white">My Profile</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+                  <i data-lucide="bookmark" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+                  <span class="text-sm text-neutral-900 dark:text-white">Bookmarks</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+                  <i data-lucide="clock" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+                  <span class="text-sm text-neutral-900 dark:text-white">Reading History</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+                  <i data-lucide="settings" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+                  <span class="text-sm text-neutral-900 dark:text-white">Settings</span>
+                </a>
+              </div>
+              
+              <!-- Divider -->
+              <div class="border-t border-neutral-200 dark:border-neutral-700 my-2"></div>
+              
+              <!-- Logout -->
+              <div class="py-2">
+                <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">
+                  <i data-lucide="log-out" class="w-4 h-4 text-red-600 dark:text-red-400"></i>
+                  <span class="text-sm text-red-600 dark:text-red-400 font-semibold">Log Out</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO - Search First (Most Important) -->
+    <section class="bg-gradient-to-br from-primary-50 to-blue-50 dark:from-neutral-800 dark:to-neutral-900 py-16 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-6xl font-black text-neutral-900 dark:text-white mb-6 tracking-tight">
+          Find what you need.<br class="hidden sm:block"/> Fast.
+        </h1>
+        <p class="text-xl text-neutral-600 dark:text-neutral-300 mb-10 max-w-2xl mx-auto">
+          Search for anything from step-by-step instructions and troubleshooting help to the latest product release news.
+        </p>
+        
+        <!-- SEARCH BAR - Command K Trigger (Hidden on mobile, replaced with icon) -->
+        <button id="cmd-k-trigger" class="hidden md:flex relative max-w-2xl mx-auto w-full items-center gap-4 h-14 px-5 border-2 border-neutral-300 dark:border-neutral-700 rounded-xl bg-neutral-50 dark:bg-neutral-800 text-left hover:border-primary-500 dark:hover:border-primary-400 transition-colors group">
+          <i data-lucide="search" class="w-6 h-6 text-neutral-400 group-hover:text-primary-600 dark:group-hover:text-primary-400"></i>
+          <span class="flex-1 text-lg text-neutral-500 dark:text-neutral-400">Search documentation or ask AI...</span>
+          <kbd class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 text-sm font-semibold text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600 rounded">
+            <span class="text-sm">⌘</span>K
+          </kbd>
+        </button>
+        
+        <!-- Quick Links Below Search -->
+        <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm">
+          <span class="text-neutral-500 dark:text-neutral-400">Popular:</span>
+          <a href="doc-page.html" class="text-primary-600 dark:text-primary-400 hover:underline">Getting Started</a>
+          <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">API Authentication</a>
+          <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">Error Codes</a>
+          <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">Integration Guide</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS - Browse by product (Most common pattern) -->
+    <section id="products" class="py-20 px-6 bg-neutral-50 dark:bg-neutral-900">
+      <div class="max-w-screen-2xl mx-auto">
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold text-neutral-900 dark:text-white mb-3">Products</h2>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300">Select a product to view documentation</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          
+          <!-- Product Card: Discover CX CMS -->
+          <div class="border border-neutral-300 dark:border-neutral-700 rounded-xl overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-primary-900 to-primary-800 text-white p-6">
+              <h3 class="text-2xl font-bold mb-1">Discover CX CMS</h3>
+              <p class="text-white/80 text-sm">Enterprise Content Management</p>
+            </div>
+            <!-- Body -->
+            <div class="bg-neutral-50 dark:bg-neutral-800 p-6 flex-1">
+              <p class="text-neutral-700 dark:text-neutral-300 mb-6">
+                Precision content management for enterprise teams. Structure, taxonomy, and delivery that works.
+              </p>
+              <div class="space-y-3">
+                <a href="doc-page.html" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Creating Pages</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Schema Designer</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Publishing System</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Assets Manager</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Workflows Designer</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card: Discover CX -->
+          <div class="border border-neutral-300 dark:border-neutral-700 rounded-xl overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+            <div class="bg-gradient-to-r from-accent-900 to-accent-800 text-white p-6">
+              <h3 class="text-2xl font-bold mb-1">Discover CX</h3>
+              <p class="text-white/80 text-sm">AI-Powered Documentation Intelligence</p>
+            </div>
+            <div class="bg-neutral-50 dark:bg-neutral-800 p-6 flex-1">
+              <p class="text-neutral-700 dark:text-neutral-300 mb-6">
+                Find answers instantly with AI-powered search and analytics for technical content.
+              </p>
+              <div class="space-y-3">
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>AI Search Setup</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Analytics & Insights</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Knowledge Management</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Integration Guide</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card: AI Assists -->
+          <div class="border border-neutral-300 dark:border-neutral-700 rounded-xl overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+            <div class="bg-gradient-to-r from-primary-900 to-pink-900 text-white p-6">
+              <h3 class="text-2xl font-bold mb-1">AI Assists</h3>
+              <p class="text-white/80 text-sm">AI Features That Help You Win</p>
+            </div>
+            <div class="bg-neutral-50 dark:bg-neutral-800 p-6 flex-1">
+              <p class="text-neutral-700 dark:text-neutral-300 mb-6">
+                Search Answers, TL;DR summaries, code explanations, and contextual chat powered by AI.
+              </p>
+              <div class="space-y-3">
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Search Answers</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>TL;DR Summaries</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Explain This Code</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Contextual Chat</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card: InSite Search -->
+          <div class="border border-neutral-300 dark:border-neutral-700 rounded-xl overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+            <div class="bg-gradient-to-r from-blue-900 to-blue-800 text-white p-6">
+              <h3 class="text-2xl font-bold mb-1">InSite Search</h3>
+              <p class="text-white/80 text-sm">Enterprise Search Platform</p>
+            </div>
+            <div class="bg-neutral-50 dark:bg-neutral-800 p-6 flex-1">
+              <p class="text-neutral-700 dark:text-neutral-300 mb-6">
+                Search that understands context and intent. Built for technical documentation.
+              </p>
+              <div class="space-y-3">
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Configuration</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Search Analytics</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between group text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Best Practices</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMON TASKS - Task-based navigation -->
+    <section class="py-20 px-6 bg-neutral-50 dark:bg-neutral-800">
+      <div class="max-w-screen-2xl mx-auto">
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold text-neutral-900 dark:text-white mb-3">Common Tasks</h2>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300">Quick access to frequent documentation needs</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <a href="#" class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 hover:border-primary-500 hover:shadow-md transition-all group">
+            <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-neutral-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400">Install & Setup</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400">Get started with installation and configuration</p>
+          </a>
+
+          <a href="#" class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 hover:border-primary-500 hover:shadow-md transition-all group">
+            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-neutral-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400">API Documentation</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400">REST API, GraphQL, SDKs, and code examples</p>
+          </a>
+
+          <a href="#" class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 hover:border-primary-500 hover:shadow-md transition-all group">
+            <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-neutral-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400">Integrations</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400">Connect with third-party tools and services</p>
+          </a>
+
+          <a href="#" class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 hover:border-primary-500 hover:shadow-md transition-all group">
+            <div class="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-neutral-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400">Troubleshooting</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400">Common issues, error codes, and solutions</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GETTING STARTED - Critical for new users -->
+    <section class="py-20 px-6 bg-neutral-50 dark:bg-neutral-900">
+      <div class="max-w-screen-2xl mx-auto">
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold text-neutral-900 dark:text-white mb-3">Getting Started</h2>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300">New to Discover CX? Start here</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <a href="doc-page.html" class="bg-neutral-50 dark:bg-neutral-800 p-8 rounded-xl border-2 border-primary-200 dark:border-primary-900 hover:border-primary-500 hover:shadow-lg transition-all">
+            <div class="text-primary-600 dark:text-primary-400 font-bold text-4xl mb-3">01</div>
+            <h3 class="text-2xl font-bold text-neutral-900 dark:text-white mb-3">Quick Start</h3>
+            <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+              Get up and running in 5 minutes with our step-by-step guide.
+            </p>
+            <span class="text-primary-600 dark:text-primary-400 font-semibold">Start tutorial →</span>
+          </a>
+
+          <a href="#" class="bg-neutral-50 dark:bg-neutral-800 p-8 rounded-xl border-2 border-blue-200 dark:border-blue-900 hover:border-blue-500 hover:shadow-lg transition-all">
+            <div class="text-blue-600 dark:text-blue-400 font-bold text-4xl mb-3">02</div>
+            <h3 class="text-2xl font-bold text-neutral-900 dark:text-white mb-3">Core Concepts</h3>
+            <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+              Understand how Discover CX structures and manages content.
+            </p>
+            <span class="text-blue-600 dark:text-blue-400 font-semibold">Learn concepts →</span>
+          </a>
+
+          <a href="#" class="bg-neutral-50 dark:bg-neutral-800 p-8 rounded-xl border-2 border-green-200 dark:border-green-900 hover:border-green-500 hover:shadow-lg transition-all">
+            <div class="text-green-600 dark:text-green-400 font-bold text-4xl mb-3">03</div>
+            <h3 class="text-2xl font-bold text-neutral-900 dark:text-white mb-3">First Project</h3>
+            <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+              Build and publish your first project with our complete tutorial.
+            </p>
+            <span class="text-green-600 dark:text-green-400 font-semibold">Build project →</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT - Always accessible -->
+    <section id="support" class="py-20 px-6 bg-neutral-50 dark:bg-neutral-800">
+      <div class="max-w-screen-2xl mx-auto">
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold text-neutral-900 dark:text-white mb-3">How else can we help?</h2>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300">Additional resources and support options</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Contact Support Card -->
+          <a href="#" class="group relative overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700 hover:shadow-2xl transition-all">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=800&auto=format&fit=crop" 
+                alt="Contact Support" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-6 bg-neutral-50 dark:bg-neutral-900">
+              <h3 class="font-bold text-neutral-900 dark:text-white mb-2">Contact Support</h3>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400">Get personalized help from our team</p>
+            </div>
+          </a>
+
+          <!-- Community Forum Card -->
+          <a href="#" class="group relative overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700 hover:shadow-2xl transition-all">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop" 
+                alt="Community Forum" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-6 bg-neutral-50 dark:bg-neutral-900">
+              <h3 class="font-bold text-neutral-900 dark:text-white mb-2">Community Forum</h3>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400">Connect with other users and experts</p>
+            </div>
+          </a>
+
+          <!-- FAQs Card -->
+          <a href="#" class="group relative overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700 hover:shadow-2xl transition-all">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop" 
+                alt="FAQs" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-6 bg-neutral-50 dark:bg-neutral-900">
+              <h3 class="font-bold text-neutral-900 dark:text-white mb-2">FAQs</h3>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400">Find answers to common questions</p>
+            </div>
+          </a>
+
+          <!-- Video Tutorials Card -->
+          <a href="#" class="group relative overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700 hover:shadow-2xl transition-all">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop" 
+                alt="Video Tutorials" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-6 bg-neutral-50 dark:bg-neutral-900">
+              <h3 class="font-bold text-neutral-900 dark:text-white mb-2">Video Tutorials</h3>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400">Learn visually with guided videos</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER - Full width, content centered -->
+  <footer class="w-full bg-neutral-900 dark:bg-neutral-950 text-white py-12">
+    <div class="max-w-screen-2xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <div>
+          <h3 class="font-bold mb-4">Products</h3>
+          <div class="space-y-2 text-sm text-neutral-400">
+            <a href="#products" class="block hover:text-white">Discover CX CMS</a>
+            <a href="#" class="block hover:text-white">Discover CX</a>
+            <a href="#" class="block hover:text-white">AI Assists</a>
+            <a href="#" class="block hover:text-white">InSite Search</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold mb-4">Documentation</h3>
+          <div class="space-y-2 text-sm text-neutral-400">
+            <a href="doc-page.html" class="block hover:text-white">Getting Started</a>
+            <a href="#" class="block hover:text-white">API Reference</a>
+            <a href="#" class="block hover:text-white">Guides & Tutorials</a>
+            <a href="#" class="block hover:text-white">Best Practices</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold mb-4">Support</h3>
+          <div class="space-y-2 text-sm text-neutral-400">
+            <a href="#support" class="block hover:text-white">Contact Support</a>
+            <a href="#" class="block hover:text-white">Community Forum</a>
+            <a href="#" class="block hover:text-white">FAQs</a>
+            <a href="#" class="block hover:text-white">Known Issues</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold mb-4">Company</h3>
+          <div class="space-y-2 text-sm text-neutral-400">
+            <a href="#" class="block hover:text-white">About Discover CX</a>
+            <a href="#" class="block hover:text-white">Contact Us</a>
+            <a href="#" class="block hover:text-white">Privacy Policy</a>
+            <a href="#" class="block hover:text-white">Terms of Service</a>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="border-t border-neutral-800 pt-8 text-center text-sm text-neutral-400">
+        © 2025 Discover CX by Ingeniux. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Command K Search Modal -->
+  <div id="cmd-k-modal" class="hidden fixed inset-0 bg-neutral-950/50 backdrop-blur-sm z-50 p-4 md:p-8">
+    <div class="max-w-3xl mx-auto mt-20">
+      <!-- Search Container -->
+      <div class="bg-neutral-50 dark:bg-neutral-900 rounded-xl shadow-2xl border border-neutral-200 dark:border-neutral-700 overflow-hidden">
+        
+        <!-- Search Input -->
+        <div class="flex items-center gap-3 px-4 py-4 border-b border-neutral-200 dark:border-neutral-700">
+          <i data-lucide="search" class="w-5 h-5 text-neutral-400"></i>
+          <input 
+            id="cmd-k-input"
+            type="text" 
+            placeholder="Search documentation or ask AI..." 
+            class="flex-1 bg-transparent text-neutral-900 dark:text-white placeholder-gray-400 focus:outline-none text-lg"
+            autocomplete="off"
+          />
+          <button id="cmd-k-close" class="p-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded">
+            <i data-lucide="x" class="w-5 h-5 text-neutral-400"></i>
+          </button>
+        </div>
+        
+        <!-- Filters -->
+        <div class="flex items-center gap-2 px-4 py-3 border-b border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800">
+          <span class="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wide">Filter:</span>
+          <div class="flex gap-2">
+            <button class="filter-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-primary-600 text-white">
+              All Results
+            </button>
+            <button class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-neutral-50 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 border border-neutral-300 dark:border-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-600">
+              Documentation
+            </button>
+            <button class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-neutral-50 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 border border-neutral-300 dark:border-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-600">
+              AI Answers
+            </button>
+          </div>
+        </div>
+        
+        <!-- Search Results -->
+        <div id="cmd-k-results" class="max-h-96 overflow-y-auto">
+          
+          <!-- Recent Searches (when empty) -->
+          <div id="recent-searches" class="p-4">
+            <p class="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wide mb-3">Recent Searches</p>
+            <div class="space-y-1">
+              <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-left">
+                <i data-lucide="clock" class="w-4 h-4 text-neutral-400"></i>
+                <span class="text-sm text-neutral-700 dark:text-neutral-300">Getting started with Discover CX</span>
+              </button>
+              <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-left">
+                <i data-lucide="clock" class="w-4 h-4 text-neutral-400"></i>
+                <span class="text-sm text-neutral-700 dark:text-neutral-300">API authentication methods</span>
+              </button>
+              <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-left">
+                <i data-lucide="clock" class="w-4 h-4 text-neutral-400"></i>
+                <span class="text-sm text-neutral-700 dark:text-neutral-300">Integration examples</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Search Results (when searching) -->
+          <div id="search-results" class="hidden">
+            <!-- AI Answers (Top Priority) -->
+            <div class="p-4 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/10 dark:to-blue-900/10">
+              <p class="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wide mb-3 flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4 text-primary-600 dark:text-primary-400"></i>
+                AI Answer
+              </p>
+              <div class="space-y-4">
+                <div class="p-4 rounded-lg bg-neutral-50 dark:bg-neutral-800 border border-primary-200 dark:border-primary-700">
+                  <p class="text-base font-semibold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
+                    <i data-lucide="zap" class="w-5 h-5 text-primary-600 dark:text-primary-400"></i>
+                    Quick Answer
+                  </p>
+                  <p class="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+                    Discover CX is an enterprise content management and customer experience platform that helps organizations create, manage, and deliver personalized content across all digital channels. It combines powerful CMS capabilities with AI-driven insights to optimize customer engagement and content performance.
+                  </p>
+                  
+                  <!-- Key Points -->
+                  <div class="bg-neutral-50 dark:bg-neutral-900 rounded-lg p-3 mb-3">
+                    <p class="text-xs font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Key Capabilities:</p>
+                    <ul class="text-xs text-neutral-600 dark:text-neutral-400 space-y-1 ml-4 list-disc">
+                      <li>Enterprise content management with version control</li>
+                      <li>AI-powered search and content recommendations</li>
+                      <li>Omnichannel content delivery</li>
+                      <li>Advanced workflow automation</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="flex flex-wrap gap-2">
+                    <a href="doc-page.html" class="inline-flex items-center gap-1 text-xs text-primary-600 dark:text-primary-400 font-semibold hover:underline">
+                      <i data-lucide="book-open" class="w-3 h-3"></i>
+                      Read full guide
+                    </a>
+                    <a href="#" class="inline-flex items-center gap-1 text-xs text-primary-600 dark:text-primary-400 font-semibold hover:underline">
+                      <i data-lucide="play-circle" class="w-3 h-3"></i>
+                      Watch demo
+                    </a>
+                    <a href="#" class="inline-flex items-center gap-1 text-xs text-primary-600 dark:text-primary-400 font-semibold hover:underline">
+                      <i data-lucide="users" class="w-3 h-3"></i>
+                      Talk to sales
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Documentation Results -->
+            <div class="p-4">
+              <p class="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wide mb-3 flex items-center justify-between">
+                <span>Documentation</span>
+                <span class="text-neutral-400">6 results</span>
+              </p>
+              <div class="space-y-1">
+                <!-- Result 1 -->
+                <a href="doc-page.html" class="flex items-start gap-3 px-3 py-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors group">
+                  <i data-lucide="file-text" class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5"></i>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400">Getting Started Guide</p>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-1 line-clamp-2">Set up Discover CX in under 30 minutes. Learn the basics of content creation, publishing, and delivery.</p>
+                    <div class="flex items-center gap-3 mt-2">
+                      <span class="text-xs text-neutral-500 dark:text-neutral-400">Introduction</span>
+                      <span class="text-xs text-neutral-400">•</span>
+                      <span class="text-xs text-neutral-500 dark:text-neutral-400">5 min read</span>
+                    </div>
+                  </div>
+                  <span class="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded font-semibold flex-shrink-0">Guide</span>
+                </a>
+                
+                <!-- Result 2 -->
+                <a href="#" class="flex items-start gap-3 px-3 py-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors group">
+                  <i data-lucide="code" class="w-5 h-5 text-primary-600 dark:text-primary-400 flex-shrink-0 mt-0.5"></i>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400">REST API Reference</p>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-1 line-clamp-2">Complete REST API documentation for content management, search, and delivery endpoints.</p>
+                    <div class="flex items-center gap-3 mt-2">
+                      <span class="text-xs text-neutral-500 dark:text-neutral-400">API Reference</span>
+                      <span class="text-xs text-neutral-400">•</span>
+                      <span class="text-xs text-neutral-500 dark:text-neutral-400">Reference</span>
+                    </div>
+                  </div>
+                  <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded font-semibold flex-shrink-0">API</span>
+                </a>
+                
+                <!-- Result 3 -->
+                <a href="#" class="flex items-start gap-3 px-3 py-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors group">
+                  <i data-lucide="play-circle" class="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5"></i>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400">AI Search Tutorial</p>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-1 line-clamp-2">Learn how to implement AI-powered search with natural language queries and instant answers.</p>
+                    <div class="flex items-center gap-3 mt-2">
+                      <span class="text-xs text-neutral-500 dark:text-neutral-400">AI Features</span>
+                      <span class="text-xs text-neutral-400">•</span>
+                      <span class="text-xs text-neutral-500 dark:text-neutral-400">10 min</span>
+                    </div>
+                  </div>
+                  <span class="text-xs px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded font-semibold flex-shrink-0">Tutorial</span>
+                </a>
+                
+                <!-- View all results -->
+                <a href="search-results.html" class="block w-full text-center py-3 text-sm text-primary-600 dark:text-primary-400 font-semibold hover:bg-primary-50 dark:hover:bg-primary-900/20 rounded-lg transition-colors">
+                  View all 6 results →
+                </a>
+              </div>
+            </div>
+            
+            <!-- Related Topics -->
+            <div class="p-4 border-t border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800">
+              <p class="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wide mb-3">Related Topics</p>
+              <div class="flex flex-wrap gap-2">
+                <a href="#" class="px-3 py-1.5 bg-neutral-50 dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 rounded-full text-xs font-medium text-neutral-700 dark:text-neutral-300 hover:border-primary-500 dark:hover:border-primary-400 transition-colors">
+                  AI Features
+                </a>
+                <a href="#" class="px-3 py-1.5 bg-neutral-50 dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 rounded-full text-xs font-medium text-neutral-700 dark:text-neutral-300 hover:border-primary-500 dark:hover:border-primary-400 transition-colors">
+                  Content Types
+                </a>
+                <a href="#" class="px-3 py-1.5 bg-neutral-50 dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 rounded-full text-xs font-medium text-neutral-700 dark:text-neutral-300 hover:border-primary-500 dark:hover:border-primary-400 transition-colors">
+                  Workflows
+                </a>
+                <a href="#" class="px-3 py-1.5 bg-neutral-50 dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 rounded-full text-xs font-medium text-neutral-700 dark:text-neutral-300 hover:border-primary-500 dark:hover:border-primary-400 transition-colors">
+                  Integrations
+                </a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Footer hint -->
+        <div class="flex items-center justify-between px-4 py-3 bg-neutral-50 dark:bg-neutral-800 border-t border-neutral-200 dark:border-neutral-700">
+          <div class="flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-400">
+            <span class="flex items-center gap-1.5">
+              <kbd class="px-1.5 py-0.5 bg-neutral-50 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600 rounded text-xs">↑↓</kbd>
+              Navigate
+            </span>
+            <span class="flex items-center gap-1.5">
+              <kbd class="px-1.5 py-0.5 bg-neutral-50 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600 rounded text-xs">↵</kbd>
+              Select
+            </span>
+            <span class="flex items-center gap-1.5">
+              <kbd class="px-1.5 py-0.5 bg-neutral-50 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600 rounded text-xs">esc</kbd>
+              Close
+            </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  
+  <!-- Theme Switcher in User Menu -->
+  <script>
+    // Theme switching
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        // Auto mode - use system preference
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        localStorage.setItem('theme', 'auto');
+      }
+      updateThemeButtons(theme);
+    }
+    
+    function updateThemeButtons(activeTheme) {
+      const buttons = {
+        auto: document.getElementById('theme-auto'),
+        light: document.getElementById('theme-light'),
+        dark: document.getElementById('theme-dark')
+      };
+      
+      // Reset all
+      Object.values(buttons).forEach(btn => {
+        btn?.classList.remove('bg-yellow-100', 'dark:bg-yellow-900/30', 'bg-neutral-700', 'bg-neutral-100');
+        btn?.classList.add('hover:bg-neutral-100', 'dark:hover:bg-neutral-700');
+      });
+      
+      // Highlight active
+      if (activeTheme === 'light') {
+        buttons.light?.classList.add('bg-yellow-100', 'dark:bg-yellow-900/30');
+        buttons.light?.classList.remove('hover:bg-neutral-100', 'dark:hover:bg-neutral-700');
+      } else if (activeTheme === 'dark') {
+        buttons.dark?.classList.add('bg-neutral-100', 'dark:bg-neutral-700');
+      } else {
+        buttons.auto?.classList.add('bg-neutral-100', 'dark:bg-neutral-700');
+      }
+      
+      lucide.createIcons();
+    }
+    
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    
+    // Theme button listeners
+    document.getElementById('theme-auto')?.addEventListener('click', () => setTheme('auto'));
+    document.getElementById('theme-light')?.addEventListener('click', () => setTheme('light'));
+    document.getElementById('theme-dark')?.addEventListener('click', () => setTheme('dark'));
+  </script>
+  
+  <!-- Command K Search -->
+  <script>
+    const cmdKModal = document.getElementById('cmd-k-modal');
+    const cmdKTrigger = document.getElementById('cmd-k-trigger');
+    const cmdKInput = document.getElementById('cmd-k-input');
+    const cmdKClose = document.getElementById('cmd-k-close');
+    const recentSearches = document.getElementById('recent-searches');
+    const searchResults = document.getElementById('search-results');
+    
+    // Open modal
+    function openCmdK() {
+      cmdKModal?.classList.remove('hidden');
+      setTimeout(() => {
+        cmdKInput?.focus();
+        lucide.createIcons();
+      }, 100);
+    }
+    
+    // Close modal
+    function closeCmdK() {
+      cmdKModal?.classList.add('hidden');
+      if (cmdKInput) cmdKInput.value = '';
+      recentSearches?.classList.remove('hidden');
+      searchResults?.classList.add('hidden');
+    }
+    
+    // Keyboard shortcut: Cmd/Ctrl + K
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        openCmdK();
+      }
+      
+      // ESC to close
+      if (e.key === 'Escape' && !cmdKModal?.classList.contains('hidden')) {
+        closeCmdK();
+      }
+    });
+    
+    // Click trigger button
+    cmdKTrigger?.addEventListener('click', openCmdK);
+    
+    // Click close button
+    cmdKClose?.addEventListener('click', closeCmdK);
+    
+    // Click outside modal
+    cmdKModal?.addEventListener('click', (e) => {
+      if (e.target === cmdKModal) {
+        closeCmdK();
+      }
+    });
+    
+    // Search input - show results when typing
+    cmdKInput?.addEventListener('input', (e) => {
+      if (e.target.value.trim().length > 0) {
+        recentSearches?.classList.add('hidden');
+        searchResults?.classList.remove('hidden');
+      } else {
+        recentSearches?.classList.remove('hidden');
+        searchResults?.classList.add('hidden');
+      }
+    });
+    
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('bg-primary-600', 'text-white');
+          b.classList.add('bg-neutral-50', 'dark:bg-neutral-700', 'text-neutral-700', 'dark:text-neutral-300', 'border', 'border-neutral-300', 'dark:border-neutral-600');
+        });
+        
+        this.classList.remove('bg-neutral-50', 'dark:bg-neutral-700', 'text-neutral-700', 'dark:text-neutral-300', 'border', 'border-neutral-300', 'dark:border-neutral-600');
+        this.classList.add('bg-primary-600', 'text-white');
+      });
+    });
+  </script>
+  
+  <!-- Mobile Search Modal -->
+  <div id="mobile-search-modal" class="hidden fixed inset-0 z-50 bg-neutral-950/50 backdrop-blur-sm">
+    <div class="fixed inset-0 bg-neutral-50 dark:bg-neutral-900 p-4">
+      <div class="max-w-2xl mx-auto">
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-xl font-semibold text-neutral-900 dark:text-white">Search</h2>
+          <button id="mobile-search-close" class="p-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg">
+            <i data-lucide="x" class="w-6 h-6 text-neutral-600 dark:text-neutral-400"></i>
+          </button>
+        </div>
+        
+        <!-- Search Input -->
+        <div class="relative mb-6">
+          <div class="relative flex items-center gap-4 h-14 px-5 border-2 border-neutral-300 dark:border-neutral-700 rounded-xl bg-neutral-50 dark:bg-neutral-800">
+            <i data-lucide="search" class="w-6 h-6 text-neutral-400"></i>
+            <input 
+              type="text" 
+              id="mobile-search-input"
+              placeholder="Search documentation or ask AI..."
+              class="flex-1 text-lg text-neutral-900 dark:text-white bg-transparent border-none outline-none placeholder-gray-500 dark:placeholder-gray-400"
+              autofocus
+            />
+            <button id="mobile-search-submit" class="p-2 hover:bg-neutral-100 dark:hover:bg-neutral-700 rounded-lg">
+              <i data-lucide="arrow-right" class="w-5 h-5 text-primary-600 dark:text-primary-400"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="space-y-2">
+          <p class="text-sm font-medium text-neutral-500 dark:text-neutral-400 mb-3">Popular searches:</p>
+          <a href="doc-page.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+            <i data-lucide="book-open" class="w-5 h-5 text-neutral-400"></i>
+            <span class="text-neutral-900 dark:text-white">Getting Started</span>
+          </a>
+          <a href="#" class="flex items-center gap-3 p-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+            <i data-lucide="key" class="w-5 h-5 text-neutral-400"></i>
+            <span class="text-neutral-900 dark:text-white">API Authentication</span>
+          </a>
+          <a href="#" class="flex items-center gap-3 p-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+            <i data-lucide="alert-circle" class="w-5 h-5 text-neutral-400"></i>
+            <span class="text-neutral-900 dark:text-white">Error Codes</span>
+          </a>
+          <a href="#" class="flex items-center gap-3 p-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+            <i data-lucide="link" class="w-5 h-5 text-neutral-400"></i>
+            <span class="text-neutral-900 dark:text-white">Integration Guide</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation & User Dropdowns -->
+  <script>
+    // Mobile Search Modal
+    const mobileSearchBtn = document.getElementById('mobile-search-btn');
+    const mobileSearchModal = document.getElementById('mobile-search-modal');
+    const mobileSearchClose = document.getElementById('mobile-search-close');
+    const mobileSearchInput = document.getElementById('mobile-search-input');
+    const mobileSearchSubmit = document.getElementById('mobile-search-submit');
+    
+    function openMobileSearch() {
+      mobileSearchModal?.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => mobileSearchInput?.focus(), 100);
+      lucide.createIcons();
+    }
+    
+    function closeMobileSearch() {
+      mobileSearchModal?.classList.add('hidden');
+      document.body.style.overflow = '';
+      if (mobileSearchInput) mobileSearchInput.value = '';
+    }
+    
+    mobileSearchBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openMobileSearch();
+    });
+    
+    mobileSearchClose?.addEventListener('click', closeMobileSearch);
+    
+    mobileSearchSubmit?.addEventListener('click', () => {
+      const query = mobileSearchInput?.value.trim();
+      if (query) {
+        // Redirect to search results or trigger search
+        window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
+      }
+    });
+    
+    mobileSearchInput?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const query = mobileSearchInput.value.trim();
+        if (query) {
+          window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
+        }
+      } else if (e.key === 'Escape') {
+        closeMobileSearch();
+      }
+    });
+    
+    // Close modal when clicking backdrop
+    mobileSearchModal?.addEventListener('click', (e) => {
+      if (e.target === mobileSearchModal) {
+        closeMobileSearch();
+      }
+    });
+    
+    // Navigation Dropdown (hamburger menu)
+    const navMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('mobile-menu');
+    
+    navMenuBtn?.addEventListener('click', function(e) {
+      e.stopPropagation();
+      navMenu?.classList.toggle('hidden');
+      lucide.createIcons();
+    });
+    
+    // User Dropdown Menu
+    document.getElementById('user-menu-btn')?.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const dropdown = document.getElementById('user-dropdown');
+      dropdown?.classList.toggle('hidden');
+      lucide.createIcons();
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+      const userDropdown = document.getElementById('user-dropdown');
+      const userButton = document.getElementById('user-menu-btn');
+      const navDropdown = document.getElementById('mobile-menu');
+      const navButton = document.getElementById('mobile-menu-btn');
+      
+      if (userDropdown && !userDropdown.contains(e.target) && !userButton?.contains(e.target)) {
+        userDropdown.classList.add('hidden');
+      }
+      
+      if (navDropdown && !navDropdown.contains(e.target) && !navButton?.contains(e.target)) {
+        navDropdown.classList.add('hidden');
+      }
+    });
+  </script>
+  
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

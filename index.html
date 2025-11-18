@@ -96,17 +96,16 @@
         
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity mr-8">
-          <img src="admin/assets/discover-cx-logo.svg" alt="Discover CX" class="h-7 w-auto dark:hidden">
-          <img src="admin/assets/discover-cx-logo-white.svg" alt="Discover CX" class="h-7 w-auto hidden dark:block">
-          <span class="hidden lg:inline font-normal text-lg text-neutral-600 dark:text-neutral-400">Product Documentation</span>
+          <img src="assets/images/American_Red_Cross_logo.svg" alt="American Red Cross" class="h-10 w-auto">
+          <span class="hidden lg:inline font-normal text-lg text-neutral-600 dark:text-neutral-400">Doctrine</span>
         </a>
         
         <!-- Primary Nav - Absolutely centered -->
         <nav class="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
-          <a href="#products" class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white font-medium whitespace-nowrap">Products</a>
-          <a href="doc-page.html" class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white font-medium whitespace-nowrap">Guides</a>
-          <a href="#" class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white font-medium whitespace-nowrap">API Reference</a>
-          <a href="#support" class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white font-medium whitespace-nowrap">Support</a>
+          <a href="#products" class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white font-medium whitespace-nowrap">All Documents</a>
+          <a href="doc-page.html" class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white font-medium whitespace-nowrap">Policies</a>
+          <a href="#" class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white font-medium whitespace-nowrap">Training Materials</a>
+          <a href="#support" class="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white font-medium whitespace-nowrap">Resources</a>
         </nav>
         
         <!-- Right Actions -->
@@ -121,24 +120,30 @@
             <div id="mobile-menu" class="hidden absolute right-0 top-full mt-2 w-64 bg-white dark:bg-neutral-900 rounded-xl shadow-2xl border border-neutral-200 dark:border-neutral-700 z-50 py-2">
               <nav class="py-2">
                 <a href="#products" class="flex items-center gap-3 px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
-                  <i data-lucide="package" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
-                  <span class="text-sm font-medium text-neutral-900 dark:text-white">Products</span>
+                  <i data-lucide="file-text" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+                  <span class="text-sm font-medium text-neutral-900 dark:text-white">All Documents</span>
                 </a>
                 <a href="doc-page.html" class="flex items-center gap-3 px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
                   <i data-lucide="book-open" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
-                  <span class="text-sm font-medium text-neutral-900 dark:text-white">Guides</span>
+                  <span class="text-sm font-medium text-neutral-900 dark:text-white">Policies</span>
                 </a>
                 <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
-                  <i data-lucide="code" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
-                  <span class="text-sm font-medium text-neutral-900 dark:text-white">API Reference</span>
+                  <i data-lucide="graduation-cap" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+                  <span class="text-sm font-medium text-neutral-900 dark:text-white">Training Materials</span>
                 </a>
                 <a href="#support" class="flex items-center gap-3 px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
-                  <i data-lucide="life-buoy" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
-                  <span class="text-sm font-medium text-neutral-900 dark:text-white">Support</span>
+                  <i data-lucide="help-circle" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+                  <span class="text-sm font-medium text-neutral-900 dark:text-white">Resources</span>
                 </a>
               </nav>
             </div>
           </div>
+          
+          <!-- Offline Downloads Button -->
+          <button id="open-offline-modal" class="flex items-center gap-2 px-4 py-2 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg transition-colors">
+            <i data-lucide="download" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+            <span class="hidden sm:inline text-sm font-medium text-neutral-700 dark:text-neutral-300">Offline Downloads</span>
+          </button>
           
           <!-- User Avatar -->
           <div class="relative">
@@ -185,6 +190,10 @@
                 <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
                   <i data-lucide="clock" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
                   <span class="text-sm text-neutral-900 dark:text-white">Reading History</span>
+                </a>
+                <a href="#" id="my-downloads-link" class="flex items-center gap-3 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+                  <i data-lucide="download" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+                  <span class="text-sm text-neutral-900 dark:text-white">My Downloads</span>
                 </a>
                 <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
                   <i data-lucide="settings" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
@@ -233,7 +242,7 @@
           Find answers
         </h1>
         <p class="text-xl md:text-2xl text-neutral-200 mb-10 max-w-3xl mx-auto font-light">
-          Search for anything from step-by-step instructions and troubleshooting help to the latest product release news.
+          Search for disaster relief policies, procedures, and doctrine files for first responders and emergency personnel.
         </p>
         
         <!-- Search Bar -->
@@ -258,7 +267,7 @@
       <div class="max-w-screen-2xl mx-auto">
         <div class="mb-10">
           <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-2">Getting Started</h2>
-          <p class="text-lg text-neutral-600 dark:text-neutral-400">New to Discover CX? Start with these essential guides</p>
+          <p class="text-lg text-neutral-600 dark:text-neutral-400">Essential disaster relief policies and procedures for first responders</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -272,13 +281,13 @@
                 <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
                   <i data-lucide="rocket" class="w-6 h-6 text-primary-600 dark:text-primary-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400">Quick Start</h3>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400">Emergency Response</h3>
               </div>
               <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                Get up and running in 5 minutes. Install, configure, and publish your first content.
+                Incident Command System, shelter operations, and mass casualty procedures for disaster response.
               </p>
               <a href="doc-page.html" class="flex items-center justify-between px-4 py-2.5 rounded-lg border border-neutral-300 dark:border-neutral-600 hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-all group/btn">
-                <span class="text-sm font-medium text-neutral-900 dark:text-white">Get Started</span>
+                <span class="text-sm font-medium text-neutral-900 dark:text-white">View Procedures</span>
                 <div class="w-7 h-7 rounded-full border border-neutral-300 dark:border-neutral-600 bg-neutral-100 dark:bg-neutral-700 flex items-center justify-center group-hover/btn:bg-primary-100 dark:group-hover/btn:bg-primary-900/30 group-hover/btn:border-primary-300 dark:group-hover/btn:border-primary-700 transition-all">
                   <i data-lucide="arrow-right" class="w-4 h-4 text-neutral-600 dark:text-neutral-300 group-hover/btn:text-primary-600 dark:group-hover/btn:text-primary-400"></i>
                 </div>
@@ -291,10 +300,10 @@
                 <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
                   <i data-lucide="book-open" class="w-6 h-6 text-blue-600 dark:text-blue-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">Core Concepts</h3>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">First Aid Protocols</h3>
               </div>
               <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                Learn fundamental concepts: schemas, workflows, publishing, and content models.
+                CPR procedures, medical response, triage protocols, and first aid best practices.
               </p>
               <a href="#" class="flex items-center justify-between px-4 py-2.5 rounded-lg border border-neutral-300 dark:border-neutral-600 hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-all group/btn">
                 <span class="text-sm font-medium text-neutral-900 dark:text-white">Learn More</span>
@@ -308,15 +317,15 @@
             <div class="bg-white dark:bg-neutral-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:shadow-lg hover:border-green-300 dark:hover:border-green-700 transition-all group">
               <div class="flex items-center gap-3 mb-4">
                 <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="code-2" class="w-6 h-6 text-green-600 dark:text-green-400"></i>
+                  <i data-lucide="shield" class="w-6 h-6 text-green-600 dark:text-green-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400">API Basics</h3>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400">Safety Protocols</h3>
               </div>
               <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                Authentication, endpoints, and your first API call. Includes code examples.
+                Hazmat response, water rescue techniques, and safety procedures for emergency situations.
               </p>
               <a href="#" class="flex items-center justify-between px-4 py-2.5 rounded-lg border border-neutral-300 dark:border-neutral-600 hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-all group/btn">
-                <span class="text-sm font-medium text-neutral-900 dark:text-white">View Docs</span>
+                <span class="text-sm font-medium text-neutral-900 dark:text-white">View Safety Guides</span>
                 <div class="w-7 h-7 rounded-full border border-neutral-300 dark:border-neutral-600 bg-neutral-100 dark:bg-neutral-700 flex items-center justify-center group-hover/btn:bg-green-100 dark:group-hover/btn:bg-green-900/30 group-hover/btn:border-green-300 dark:group-hover/btn:border-green-700 transition-all">
                   <i data-lucide="arrow-right" class="w-4 h-4 text-neutral-600 dark:text-neutral-300 group-hover/btn:text-green-600 dark:group-hover/btn:text-green-400"></i>
                 </div>
@@ -329,10 +338,10 @@
                 <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
                   <i data-lucide="graduation-cap" class="w-6 h-6 text-purple-600 dark:text-purple-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">Tutorials</h3>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">Training Materials</h3>
               </div>
               <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                Step-by-step tutorials for common workflows and advanced features.
+                Video training series, training guides, and educational content for first responders.
               </p>
               <a href="#" class="flex items-center justify-between px-4 py-2.5 rounded-lg border border-neutral-300 dark:border-neutral-600 hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-all group/btn">
                 <span class="text-sm font-medium text-neutral-900 dark:text-white">Start Learning</span>
@@ -348,7 +357,7 @@
           <div class="lg:col-span-4">
             <img 
               src="assets/images/Reader.png" 
-              alt="Getting Started with Discover CX" 
+              alt="Getting Started with Disaster Relief Training" 
               class="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
@@ -360,234 +369,208 @@
     <section id="products" class="py-16 px-6 bg-neutral-50 dark:bg-neutral-900">
       <div class="max-w-screen-2xl mx-auto">
         <div class="mb-10">
-          <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-2">Products</h2>
-          <p class="text-lg text-neutral-600 dark:text-neutral-400">Select a product to view documentation</p>
+          <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-2">Training Categories</h2>
+          <p class="text-lg text-neutral-600 dark:text-neutral-400">Browse disaster relief policies and procedures by category</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
-          <!-- Product Card: Discover CX CMS -->
+          <!-- Category Card: Emergency Response -->
           <div class="bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:shadow-lg hover:border-neutral-300 dark:hover:border-neutral-600 transition-all overflow-hidden group">
             <!-- Icon Header -->
             <div class="p-6 border-b border-neutral-200 dark:border-neutral-700">
               <div class="flex items-center gap-3 mb-2">
                 <div class="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="layout-dashboard" class="w-6 h-6 text-primary-600 dark:text-primary-400"></i>
+                  <i data-lucide="alert-triangle" class="w-6 h-6 text-primary-600 dark:text-primary-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Discover CX CMS</h3>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Emergency Response</h3>
               </div>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Enterprise Content Management</p>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400">Disaster Response Procedures</p>
             </div>
             
             <!-- Links -->
             <div class="p-6">
               <div class="space-y-3">
                 <a href="doc-page.html" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Creating Pages</span>
+                  <span>Incident Command System</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Schema Designer</span>
+                  <span>Shelter Operations</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Publishing System</span>
+                  <span>Mass Casualty Procedures</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Assets Manager</span>
+                  <span>Emergency Communications</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Workflows Designer</span>
+                  <span>Response Protocols</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Product Card: Discover CX -->
+          <!-- Category Card: First Aid -->
           <div class="bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:shadow-lg hover:border-neutral-300 dark:hover:border-neutral-600 transition-all overflow-hidden group">
             <div class="p-6 border-b border-neutral-200 dark:border-neutral-700">
               <div class="flex items-center gap-3 mb-2">
                 <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="sparkles" class="w-6 h-6 text-blue-600 dark:text-blue-400"></i>
+                  <i data-lucide="heart-pulse" class="w-6 h-6 text-blue-600 dark:text-blue-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Discover CX</h3>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">First Aid</h3>
               </div>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">AI-Powered Documentation Intelligence</p>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400">Medical Response & Triage</p>
             </div>
             
             <div class="p-6">
               <div class="space-y-3">
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>AI Search Setup</span>
+                  <span>CPR Procedures</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Analytics & Insights</span>
+                  <span>Triage Protocols</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Knowledge Management</span>
+                  <span>Medical Response</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Integration Guide</span>
+                  <span>First Aid Basics</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Product Card: AI Assists -->
+          <!-- Category Card: Safety Protocols -->
           <div class="bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:shadow-lg hover:border-neutral-300 dark:hover:border-neutral-600 transition-all overflow-hidden group">
             <div class="p-6 border-b border-neutral-200 dark:border-neutral-700">
               <div class="flex items-center gap-3 mb-2">
                 <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="brain" class="w-6 h-6 text-purple-600 dark:text-purple-400"></i>
+                  <i data-lucide="shield" class="w-6 h-6 text-purple-600 dark:text-purple-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">AI Assists</h3>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Safety Protocols</h3>
               </div>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">AI Features That Help You Win</p>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400">Hazmat & Rescue Procedures</p>
             </div>
             
             <div class="p-6">
               <div class="space-y-3">
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Search Answers</span>
+                  <span>Hazmat Response</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>TL;DR Summaries</span>
+                  <span>Water Rescue</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Explain This Code</span>
+                  <span>Safety Procedures</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Contextual Chat</span>
+                  <span>Risk Management</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Product Card: InSite Search -->
+          <!-- Category Card: Training Materials -->
           <div class="bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:shadow-lg hover:border-neutral-300 dark:hover:border-neutral-600 transition-all overflow-hidden group">
             <div class="p-6 border-b border-neutral-200 dark:border-neutral-700">
               <div class="flex items-center gap-3 mb-2">
                 <div class="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="search" class="w-6 h-6 text-orange-600 dark:text-orange-400"></i>
+                  <i data-lucide="graduation-cap" class="w-6 h-6 text-orange-600 dark:text-orange-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">InSite Search</h3>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Training Materials</h3>
               </div>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Enterprise Search Platform</p>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400">Video Series & Guides</p>
             </div>
             
             <div class="p-6">
               <div class="space-y-3">
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Configuration</span>
+                  <span>Training Videos</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Search Analytics</span>
+                  <span>Training Guides</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Best Practices</span>
+                  <span>Educational Content</span>
+                  <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
+                  <span>Certification Materials</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Product Card: Analytics -->
+          <!-- Category Card: Logistics -->
           <div class="bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:shadow-lg hover:border-neutral-300 dark:hover:border-neutral-600 transition-all overflow-hidden group">
             <div class="p-6 border-b border-neutral-200 dark:border-neutral-700">
               <div class="flex items-center gap-3 mb-2">
                 <div class="w-10 h-10 bg-teal-100 dark:bg-teal-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="bar-chart-3" class="w-6 h-6 text-teal-600 dark:text-teal-400"></i>
+                  <i data-lucide="truck" class="w-6 h-6 text-teal-600 dark:text-teal-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Analytics</h3>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Logistics</h3>
               </div>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Content Performance & Insights</p>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400">Resource Management</p>
             </div>
             
             <div class="p-6">
               <div class="space-y-3">
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Dashboard Overview</span>
+                  <span>Resource Management</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Reports & Metrics</span>
+                  <span>Supply Chain</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Custom Dashboards</span>
+                  <span>Operational Logistics</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Product Card: Integrations -->
+          <!-- Category Card: Doctrine & Policies -->
           <div class="bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:shadow-lg hover:border-neutral-300 dark:hover:border-neutral-600 transition-all overflow-hidden group">
             <div class="p-6 border-b border-neutral-200 dark:border-neutral-700">
               <div class="flex items-center gap-3 mb-2">
                 <div class="w-10 h-10 bg-indigo-100 dark:bg-indigo-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plug" class="w-6 h-6 text-indigo-600 dark:text-indigo-400"></i>
+                  <i data-lucide="book-open" class="w-6 h-6 text-indigo-600 dark:text-indigo-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Integrations</h3>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Doctrine & Policies</h3>
               </div>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Connect Third-Party Tools</p>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400">Official Policies & Guidelines</p>
             </div>
             
             <div class="p-6">
               <div class="space-y-3">
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Webhooks</span>
+                  <span>Policy Documents</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>API Integration</span>
+                  <span>Doctrine Files</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>Zapier & Make</span>
-                  <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product Card: Developer Tools -->
-          <div class="bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:shadow-lg hover:border-neutral-300 dark:hover:border-neutral-600 transition-all overflow-hidden group">
-            <div class="p-6 border-b border-neutral-200 dark:border-neutral-700">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="terminal" class="w-6 h-6 text-green-600 dark:text-green-400"></i>
-                </div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Developer Tools</h3>
-              </div>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">SDKs, CLI & Extensions</p>
-            </div>
-            
-            <div class="p-6">
-              <div class="space-y-3">
-                <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>CLI Tool</span>
-                  <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
-                </a>
-                <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>JavaScript SDK</span>
-                  <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
-                </a>
-                <a href="#" class="flex items-center justify-between group/link text-sm text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400">
-                  <span>VS Code Extension</span>
+                  <span>Best Practices</span>
                   <i data-lucide="chevron-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                 </a>
               </div>
@@ -681,7 +664,7 @@
         
         <div>
           <a href="index.html" class="flex items-center gap-2 mb-4">
-            <img src="admin/assets/discover-cx-logo-white.svg" alt="Discover CX" class="h-6 w-auto">
+            <img src="assets/images/American_Red_Cross_logo.svg" alt="American Red Cross" class="h-8 w-auto">
           </a>
           <p class="text-sm text-neutral-400 leading-relaxed">
             Enterprise content management and customer experience platform.
@@ -691,10 +674,10 @@
         <div>
           <h3 class="font-bold mb-4">Products</h3>
           <div class="space-y-2 text-sm text-neutral-400">
-            <a href="#products" class="block hover:text-white">Discover CX CMS</a>
-            <a href="#" class="block hover:text-white">Discover CX</a>
-            <a href="#" class="block hover:text-white">AI Assists</a>
-            <a href="#" class="block hover:text-white">InSite Search</a>
+            <a href="#products" class="block hover:text-white">Emergency Response</a>
+            <a href="#" class="block hover:text-white">First Aid</a>
+            <a href="#" class="block hover:text-white">Safety Protocols</a>
+            <a href="#" class="block hover:text-white">Training Materials</a>
           </div>
         </div>
 
@@ -845,6 +828,263 @@
 
   <!-- Support Chatbot Widget -->
   <script src="assets/js/chatbot-widget.js"></script>
+
+  <!-- Offline Downloads Manager -->
+  <script src="assets/js/offline-downloads.js"></script>
+
+  <!-- Offline Downloads Modal -->
+  <div id="offline-downloads-modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col">
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between px-6 py-4 border-b border-neutral-200 dark:border-neutral-700">
+        <h2 class="text-xl font-bold text-neutral-900 dark:text-white">Offline Downloads</h2>
+        <button id="close-offline-modal" class="p-2 hover:bg-neutral-100 dark:hover:bg-neutral-700 rounded-lg transition-colors">
+          <i data-lucide="x" class="w-5 h-5 text-neutral-600 dark:text-neutral-400"></i>
+        </button>
+      </div>
+
+      <!-- Modal Content -->
+      <div class="flex-1 overflow-y-auto p-6 space-y-6">
+        <!-- Online Status -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <i data-lucide="wifi" class="w-5 h-5 text-green-600 dark:text-green-400" id="wifi-icon"></i>
+            <span class="text-sm font-medium text-neutral-900 dark:text-white" id="online-status">Online</span>
+          </div>
+          <span id="online-badge" class="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">Connected</span>
+        </div>
+
+        <!-- Storage Information -->
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <i data-lucide="hard-drive" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
+            <h3 class="text-sm font-semibold text-neutral-900 dark:text-white">Storage Used</h3>
+          </div>
+          <div class="space-y-2">
+            <div class="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2.5">
+              <div id="storage-progress-bar" class="bg-primary-600 h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+            <div class="flex items-center justify-between text-xs text-neutral-600 dark:text-neutral-400">
+              <span id="storage-used">0 MB / 282,889 MB</span>
+              <span id="storage-percent">0.0% of available storage used</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download All Button -->
+        <button id="download-all-btn" class="w-full flex items-center justify-center gap-3 px-6 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-semibold transition-colors">
+          <i data-lucide="download" class="w-5 h-5"></i>
+          <span>Download All 50 Documents</span>
+        </button>
+
+        <!-- Feature Information -->
+        <div class="pt-4 border-t border-neutral-200 dark:border-neutral-700">
+          <ul class="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5"></i>
+              <span>Downloaded documents are available when offline</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5"></i>
+              <span>Files are stored securely on your device</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5"></i>
+              <span>Clear data to free up storage space</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5"></i>
+              <span>Documents automatically sync when new versions are available</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Downloaded Documents List -->
+        <div id="downloaded-docs-section" class="hidden pt-4 border-t border-neutral-200 dark:border-neutral-700">
+          <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-3">Downloaded Documents</h3>
+          <div id="downloaded-docs-list" class="space-y-2">
+            <!-- Documents will be listed here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Offline Downloads Modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('offline-downloads-modal');
+      const closeBtn = document.getElementById('close-offline-modal');
+      const downloadAllBtn = document.getElementById('download-all-btn');
+      const openOfflineModalBtn = document.getElementById('open-offline-modal');
+
+      // Open modal
+      function openModal() {
+        if (modal) {
+          modal.classList.remove('hidden');
+          // Update storage display when opening
+          if (window.OfflineDownloads) {
+            window.OfflineDownloads.updateStorageDisplay();
+            window.OfflineDownloads.updateOnlineStatus();
+            loadDownloadedDocuments();
+          }
+          lucide.createIcons();
+        }
+      }
+
+      // Close modal
+      function closeModal() {
+        if (modal) {
+          modal.classList.add('hidden');
+        }
+      }
+
+      // Close button
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+      }
+
+      // Close on backdrop click
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+      }
+
+      // Download all button
+      if (downloadAllBtn) {
+        downloadAllBtn.addEventListener('click', async function() {
+          if (!window.OfflineDownloads) {
+            alert('Offline downloads system is not initialized');
+            return;
+          }
+
+          // Disable button and show loading state
+          downloadAllBtn.disabled = true;
+          downloadAllBtn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i><span>Downloading...</span>';
+          lucide.createIcons();
+
+          try {
+            // In a real implementation, this would fetch the list of documents from an API
+            // For now, we'll simulate downloading a few sample documents
+            const sampleDocuments = [
+              { id: 'doc-1', title: 'Incident Command System Overview', url: 'doc-page.html', version: '1.0.0' },
+              { id: 'doc-2', title: 'Shelter Operations Manual', url: '#', version: '1.0.0' },
+              { id: 'doc-3', title: 'CPR Procedures', url: '#', version: '1.0.0' }
+            ];
+
+            let downloaded = 0;
+            for (const doc of sampleDocuments) {
+              try {
+                await window.OfflineDownloads.downloadDocument(doc);
+                downloaded++;
+              } catch (error) {
+                console.error(`Failed to download ${doc.title}:`, error);
+              }
+            }
+
+            alert(`Successfully downloaded ${downloaded} document(s)`);
+            loadDownloadedDocuments();
+          } catch (error) {
+            console.error('Error downloading documents:', error);
+            alert('Error downloading documents. Please try again.');
+          } finally {
+            downloadAllBtn.disabled = false;
+            downloadAllBtn.innerHTML = '<i data-lucide="download" class="w-5 h-5"></i><span>Download All 50 Documents</span>';
+            lucide.createIcons();
+          }
+        });
+      }
+
+      // Load and display downloaded documents
+      async function loadDownloadedDocuments() {
+        if (!window.OfflineDownloads) return;
+
+        try {
+          const docs = await window.OfflineDownloads.getDownloadedDocuments();
+          const section = document.getElementById('downloaded-docs-section');
+          const list = document.getElementById('downloaded-docs-list');
+
+          if (docs.length > 0 && section && list) {
+            section.classList.remove('hidden');
+            list.innerHTML = docs.map(doc => `
+              <div class="flex items-center justify-between p-3 bg-neutral-50 dark:bg-neutral-800 rounded-lg">
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm font-medium text-neutral-900 dark:text-white truncate">${doc.title}</p>
+                  <p class="text-xs text-neutral-500 dark:text-neutral-400">Version ${doc.version} • ${window.OfflineDownloads.formatBytes(doc.size || 0)}</p>
+                </div>
+                <button class="ml-3 p-2 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg delete-doc-btn" data-doc-id="${doc.id}" title="Delete">
+                  <i data-lucide="trash-2" class="w-4 h-4 text-red-600 dark:text-red-400"></i>
+                </button>
+              </div>
+            `).join('');
+
+            // Add delete handlers
+            list.querySelectorAll('.delete-doc-btn').forEach(btn => {
+              btn.addEventListener('click', async function() {
+                const docId = this.getAttribute('data-doc-id');
+                if (confirm('Are you sure you want to delete this document?')) {
+                  try {
+                    await window.OfflineDownloads.deleteDocument(docId);
+                    loadDownloadedDocuments();
+                    window.OfflineDownloads.updateStorageDisplay();
+                  } catch (error) {
+                    console.error('Error deleting document:', error);
+                    alert('Error deleting document');
+                  }
+                }
+              });
+            });
+
+            lucide.createIcons();
+          } else if (section) {
+            section.classList.add('hidden');
+          }
+        } catch (error) {
+          console.error('Error loading downloaded documents:', error);
+        }
+      }
+
+      // Open modal button
+      if (openOfflineModalBtn) {
+        openOfflineModalBtn.addEventListener('click', openModal);
+      }
+      
+      // My Downloads link in user menu
+      const myDownloadsLink = document.getElementById('my-downloads-link');
+      if (myDownloadsLink) {
+        myDownloadsLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          // Close user dropdown
+          if (userDropdown) {
+            userDropdown.classList.add('hidden');
+          }
+          // Open offline downloads modal
+          openModal();
+        });
+      }
+      
+      // Make openModal available globally
+      window.openOfflineDownloads = openModal;
+
+      // Check for updates periodically when online
+      if (navigator.onLine && window.OfflineDownloads) {
+        setInterval(async () => {
+          try {
+            const updates = await window.OfflineDownloads.checkForUpdates();
+            if (updates.length > 0 && !modal.classList.contains('hidden')) {
+              // Show notification about updates
+              console.log(`${updates.length} document(s) have updates available`);
+            }
+          } catch (error) {
+            console.error('Error checking for updates:', error);
+          }
+        }, 60000); // Check every minute
+      }
+    });
+  </script>
 
 </body>
 </html>

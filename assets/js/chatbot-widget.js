@@ -18,7 +18,7 @@
       
       <!-- Chat Header -->
       <div class="flex items-center justify-between px-6 py-4 border-b border-neutral-200 dark:border-neutral-700">
-        <h3 class="text-base font-semibold text-neutral-900 dark:text-white">Chat with us</h3>
+        <h3 class="text-base font-semibold text-neutral-900 dark:text-white">Training Library Assistant</h3>
         <button id="chat-close-btn" class="p-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-700 rounded-lg transition-colors">
           <i data-lucide="x" class="w-5 h-5 text-neutral-600 dark:text-neutral-400"></i>
         </button>
@@ -30,26 +30,26 @@
         <!-- Welcome Message -->
         <div class="flex gap-3">
           <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary-600 to-blue-600 rounded-full flex items-center justify-center">
-            <span class="text-white text-xs font-bold">CX</span>
+            <span class="text-white text-xs font-bold">RC</span>
           </div>
           <div class="flex-1">
             <div class="bg-white dark:bg-neutral-800 rounded-2xl rounded-tl-none p-4 shadow-sm border border-neutral-200 dark:border-neutral-700">
               <div class="flex items-center gap-2 mb-3">
                 <i data-lucide="hand-metal" class="w-4 h-4 text-neutral-600 dark:text-neutral-400"></i>
-                <p class="text-sm text-neutral-900 dark:text-white">Hi! How can I help you today?</p>
+                <p class="text-sm text-neutral-900 dark:text-white">Hi! I can help you with Red Cross policy documentation, ICS procedures, and emergency response protocols. What would you like to know?</p>
               </div>
               <div class="flex flex-wrap gap-2">
                 <button class="quick-action-btn text-xs px-3 py-2 bg-neutral-100 dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:border-primary-500 dark:hover:border-primary-400 transition-colors">
-                  Getting Started
+                  ICS Overview
                 </button>
                 <button class="quick-action-btn text-xs px-3 py-2 bg-neutral-100 dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:border-primary-500 dark:hover:border-primary-400 transition-colors">
-                  API Documentation
+                  Emergency Response
                 </button>
                 <button class="quick-action-btn text-xs px-3 py-2 bg-neutral-100 dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:border-primary-500 dark:hover:border-primary-400 transition-colors">
-                  Troubleshooting
+                  Shelter Operations
                 </button>
                 <button class="quick-action-btn text-xs px-3 py-2 bg-neutral-100 dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:border-primary-500 dark:hover:border-primary-400 transition-colors">
-                  Contact Support
+                  First Aid Procedures
                 </button>
               </div>
             </div>
@@ -62,7 +62,7 @@
         <!-- Typing Indicator -->
         <div id="typing-indicator" class="hidden flex gap-3">
           <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary-600 to-blue-600 rounded-full flex items-center justify-center">
-            <span class="text-white text-xs font-bold">CX</span>
+            <span class="text-white text-xs font-bold">RC</span>
           </div>
           <div class="flex-1">
             <div class="bg-white dark:bg-neutral-800 rounded-2xl rounded-tl-none p-4 shadow-sm border border-neutral-200 dark:border-neutral-700 w-20">
@@ -105,7 +105,7 @@
           </button>
         </form>
         <p class="text-xs text-neutral-500 dark:text-neutral-400 text-center">
-          by Discover CX
+          American Red Cross Training Library
         </p>
       </div>
     </div>
@@ -284,15 +284,13 @@
       typingIndicator.classList.remove('hidden');
       scrollToBottom();
 
-      // Simulate AI response (replace with actual API call)
+      // Generate context-aware response (replace with actual API call)
       setTimeout(() => {
         typingIndicator.classList.add('hidden');
+        const response = generateChatbotResponse(message);
         addBotMessage(
-          "I understand you're asking about " + message + ". Based on our documentation, here's what I found...",
-          [
-            { title: "Getting Started Guide", url: "doc-page.html" },
-            { title: "API Reference", url: "#" }
-          ]
+          response.text,
+          response.references
         );
       }, 1500);
     });
@@ -408,6 +406,80 @@
       const div = document.createElement('div');
       div.textContent = text;
       return div.innerHTML;
+    }
+    
+    // Generate context-aware chatbot responses
+    function generateChatbotResponse(message) {
+      const q = message.toLowerCase();
+      let text = '';
+      let references = [];
+      
+      // ICS Structure questions
+      if (q.includes('ics') || q.includes('incident command') || q.includes('structure') || q.includes('organizational')) {
+        text = "The Incident Command System (ICS) is a standardized management system for coordinating emergency response. The ICS structure consists of five major functional areas: Command, Operations, Planning, Logistics, and Finance/Administration. The Command Staff includes the Incident Commander, Public Information Officer, Safety Officer, and Liaison Officer.";
+        references = [
+          { title: "ICS Overview", url: "doc-page.html" },
+          { title: "Emergency Response Procedures", url: "index.html#products" }
+        ];
+      }
+      // Emergency Response questions
+      else if (q.includes('emergency response') || q.includes('disaster') || q.includes('incident')) {
+        text = "Emergency response procedures follow the Incident Command System (ICS) framework. When an incident occurs, the first responder assumes command, assesses the situation, establishes the ICS structure, and coordinates resource deployment. Key steps include: initial assessment, establishing command, activating appropriate sections, developing an Incident Action Plan, and conducting briefings.";
+        references = [
+          { title: "ICS Implementation", url: "doc-page.html" },
+          { title: "Emergency Response", url: "index.html#products" }
+        ];
+      }
+      // Shelter Operations questions
+      else if (q.includes('shelter') || q.includes('evacuation') || q.includes('refugee')) {
+        text = "Shelter operations involve establishing and managing emergency shelters during disasters. This includes site selection, setup procedures, client registration, providing basic needs (food, water, medical care), maintaining safety and security, and coordinating with other response agencies. Shelter managers follow Red Cross protocols for capacity management, resource allocation, and client services.";
+        references = [
+          { title: "Shelter Operations Manual", url: "index.html#products" },
+          { title: "Emergency Response", url: "index.html#products" }
+        ];
+      }
+      // First Aid questions
+      else if (q.includes('first aid') || q.includes('cpr') || q.includes('medical') || q.includes('triage')) {
+        text = "First aid procedures include CPR, basic life support, wound care, and triage protocols. Red Cross follows standard medical response procedures including: assessing the scene for safety, checking for responsiveness, calling for help, providing appropriate first aid based on injury type, and coordinating with medical professionals. Triage protocols help prioritize care during mass casualty incidents.";
+        references = [
+          { title: "First Aid Protocols", url: "index.html#products" },
+          { title: "CPR Procedures", url: "index.html#products" }
+        ];
+      }
+      // Resource Management questions
+      else if (q.includes('resource') || q.includes('personnel') || q.includes('equipment') || q.includes('supply')) {
+        text = "Resource management in ICS includes identifying requirements, ordering resources, tracking status, and demobilizing when no longer needed. Resources are categorized by type (personnel, equipment, teams) and kind (specific capabilities). Status is tracked as Available, Assigned, Out of Service, or Demobilized. Accurate tracking ensures efficient deployment during emergency operations.";
+        references = [
+          { title: "ICS Resource Management", url: "doc-page.html" },
+          { title: "Logistics", url: "index.html#products" }
+        ];
+      }
+      // Incident Action Plan questions
+      else if (q.includes('action plan') || q.includes('iap') || q.includes('planning')) {
+        text = "The Incident Action Plan (IAP) is a written plan containing objectives, strategies, and tactics for managing an incident. It's developed for each operational period (typically 12-24 hours), must be approved by the Incident Commander, and should be briefed to all personnel. The IAP serves as the primary communication tool for coordinating response activities.";
+        references = [
+          { title: "ICS Overview", url: "doc-page.html" },
+          { title: "Planning Section", url: "doc-page.html" }
+        ];
+      }
+      // Safety questions
+      else if (q.includes('safety') || q.includes('hazmat') || q.includes('hazard') || q.includes('risk')) {
+        text = "Safety protocols are critical in emergency response. The Safety Officer monitors operations, advises the Incident Commander on safety issues, and can stop unsafe operations. Safety procedures include: hazard identification, risk assessment, personal protective equipment (PPE) requirements, decontamination procedures for hazmat incidents, and maintaining safety zones.";
+        references = [
+          { title: "Safety Protocols", url: "index.html#products" },
+          { title: "Hazmat Response", url: "index.html#products" }
+        ];
+      }
+      // Default response
+      else {
+        text = "I can help you with Red Cross policy documentation, Incident Command System (ICS) procedures, emergency response protocols, shelter operations, first aid procedures, and resource management. Could you provide more details about what specific information you're looking for?";
+        references = [
+          { title: "ICS Overview", url: "doc-page.html" },
+          { title: "Training Library", url: "index.html" }
+        ];
+      }
+      
+      return { text, references };
     }
   }
 })();

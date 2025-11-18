@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search Results - Discover CX Docs</title>
+  <title>Search Results - Training Library</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="admin/assets/theme-loader.js"></script>
@@ -114,9 +114,8 @@
         
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity flex-shrink-0">
-          <img src="admin/assets/discover-cx-logo.svg" alt="Discover CX" class="h-7 dark:hidden">
-          <img src="admin/assets/discover-cx-logo-white.svg" alt="Discover CX" class="h-7 hidden dark:block">
-          <span class="hidden sm:inline font-normal text-lg text-neutral-600 dark:text-neutral-400">Product Documentation</span>
+          <img src="assets/images/American_Red_Cross_logo.svg" alt="American Red Cross" class="h-10 w-auto">
+          <span class="hidden sm:inline font-normal text-lg text-neutral-600 dark:text-neutral-400">Doctrine</span>
         </a>
         
         <!-- Search Bar -->
@@ -124,9 +123,9 @@
           <div class="relative">
             <input 
               type="text" 
-              value="component schemas"
+              value="incident command system"
               class="w-full px-4 py-2 pl-11 pr-10 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400"
-              placeholder="Search documentation..."
+              placeholder="Search training materials, procedures..."
             />
             <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400"></i>
             <button class="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300">
@@ -149,17 +148,21 @@
                 <i data-lucide="home" class="w-4 h-4"></i>
                 <span>Home</span>
               </a>
+              <a href="index.html#products" class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700">
+                <i data-lucide="file-text" class="w-4 h-4"></i>
+                <span>All Documents</span>
+              </a>
               <a href="doc-page.html" class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700">
                 <i data-lucide="book-open" class="w-4 h-4"></i>
-                <span>Documentation</span>
+                <span>Policies</span>
               </a>
               <a href="#" class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700">
-                <i data-lucide="code" class="w-4 h-4"></i>
-                <span>API Reference</span>
+                <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                <span>Training Materials</span>
               </a>
-              <a href="#" class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700">
-                <i data-lucide="life-buoy" class="w-4 h-4"></i>
-                <span>Support</span>
+              <a href="index.html#support" class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700">
+                <i data-lucide="help-circle" class="w-4 h-4"></i>
+                <span>Resources</span>
               </a>
             </div>
           </div>
@@ -200,6 +203,10 @@
               <a href="user-profile.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
                 <i data-lucide="user" class="w-4 h-4"></i>
                 <span>Profile</span>
+              </a>
+              <a href="#" id="my-downloads-link" class="flex items-center gap-3 px-4 py-2.5 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                <span>My Downloads</span>
               </a>
               <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
                 <i data-lucide="bell" class="w-4 h-4"></i>
@@ -285,18 +292,18 @@
             <div class="filter-content space-y-2.5">
               <label class="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 cursor-pointer hover:text-neutral-900 dark:hover:text-white">
                 <input type="checkbox" class="w-4 h-4 rounded border-neutral-300 dark:border-neutral-600 text-primary-600 focus:ring-purple-500 focus:ring-2" checked />
-                <span>Documentation</span>
-                <span class="ml-auto text-xs text-neutral-500 dark:text-neutral-500">(8)</span>
+                <span>Policy Documents</span>
+                <span class="ml-auto text-xs text-neutral-500 dark:text-neutral-500">(6)</span>
               </label>
               <label class="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 cursor-pointer hover:text-neutral-900 dark:hover:text-white">
                 <input type="checkbox" class="w-4 h-4 rounded border-neutral-300 dark:border-neutral-600 text-primary-600 focus:ring-purple-500 focus:ring-2" />
-                <span>Tutorials</span>
+                <span>Training Videos</span>
+                <span class="ml-auto text-xs text-neutral-500 dark:text-neutral-500">(4)</span>
+              </label>
+              <label class="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 cursor-pointer hover:text-neutral-900 dark:hover:text-white">
+                <input type="checkbox" class="w-4 h-4 rounded border-neutral-300 dark:border-neutral-600 text-primary-600 focus:ring-purple-500 focus:ring-2" />
+                <span>Procedure Manuals</span>
                 <span class="ml-auto text-xs text-neutral-500 dark:text-neutral-500">(3)</span>
-              </label>
-              <label class="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 cursor-pointer hover:text-neutral-900 dark:hover:text-white">
-                <input type="checkbox" class="w-4 h-4 rounded border-neutral-300 dark:border-neutral-600 text-primary-600 focus:ring-purple-500 focus:ring-2" />
-                <span>API Reference</span>
-                <span class="ml-auto text-xs text-neutral-500 dark:text-neutral-500">(2)</span>
               </label>
             </div>
           </div>
@@ -310,13 +317,18 @@
             <div class="filter-content space-y-2.5">
               <label class="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 cursor-pointer hover:text-neutral-900 dark:hover:text-white">
                 <input type="checkbox" class="w-4 h-4 rounded border-neutral-300 dark:border-neutral-600 text-primary-600 focus:ring-purple-500 focus:ring-2" checked />
-                <span>Discover CX Platform</span>
-                <span class="ml-auto text-xs text-neutral-500 dark:text-neutral-500">(12)</span>
+                <span>Emergency Response</span>
+                <span class="ml-auto text-xs text-neutral-500 dark:text-neutral-500">(8)</span>
               </label>
               <label class="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 cursor-pointer hover:text-neutral-900 dark:hover:text-white">
                 <input type="checkbox" class="w-4 h-4 rounded border-neutral-300 dark:border-neutral-600 text-primary-600 focus:ring-purple-500 focus:ring-2" />
-                <span>AI Assists</span>
+                <span>First Aid</span>
                 <span class="ml-auto text-xs text-neutral-500 dark:text-neutral-500">(5)</span>
+              </label>
+              <label class="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 cursor-pointer hover:text-neutral-900 dark:hover:text-white">
+                <input type="checkbox" class="w-4 h-4 rounded border-neutral-300 dark:border-neutral-600 text-primary-600 focus:ring-purple-500 focus:ring-2" />
+                <span>Safety Protocols</span>
+                <span class="ml-auto text-xs text-neutral-500 dark:text-neutral-500">(4)</span>
               </label>
             </div>
           </div>
@@ -369,8 +381,8 @@
         
         <!-- Header -->
         <div class="mb-6">
-          <h1 id="search-query-heading" class="text-2xl font-bold text-neutral-900 dark:text-white mb-2">Results for "component schemas"</h1>
-          <p class="text-sm text-neutral-600 dark:text-neutral-400">1 - 8 of 8 results found</p>
+          <h1 id="search-query-heading" class="text-2xl font-bold text-neutral-900 dark:text-white mb-2">Results for "incident command system"</h1>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400">1 - 6 of 6 results found</p>
         </div>
         
         <!-- AI Answer Section -->
@@ -394,29 +406,29 @@
           
           <h3 class="text-sm font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
             <i data-lucide="sparkles" class="w-4 h-4 text-primary-600 dark:text-primary-400"></i>
-            AI-powered response to "component schemas"
+            AI-powered response to "incident command system"
           </h3>
           
           <div class="text-sm text-neutral-700 dark:text-neutral-300 space-y-4 mb-6">
-            <p>Component schemas are reusable content structure definitions in Discover CX. Here's how to work with them:</p>
+            <p>The Incident Command System (ICS) is a standardized management system for coordinating emergency response. Here's how to implement it:</p>
             
             <ol class="list-decimal list-inside space-y-2 ml-2">
-              <li><strong>Navigate</strong> to the Content Models section in your dashboard</li>
-              <li><strong>Click</strong> the "New Schema" button in the top right</li>
-              <li><strong>Define</strong> your schema name and description</li>
-              <li><strong>Add fields</strong> by selecting field types (text, rich text, media, etc.)</li>
-              <li><strong>Configure</strong> validation rules for each field</li>
-              <li><strong>Save</strong> and publish your schema</li>
+              <li><strong>First responder</strong> arrives on scene and assumes command as Incident Commander</li>
+              <li><strong>Assess</strong> the incident size, complexity, and resource needs</li>
+              <li><strong>Establish</strong> initial ICS structure based on incident requirements</li>
+              <li><strong>Activate</strong> appropriate sections (Operations, Planning, Logistics, Finance/Administration)</li>
+              <li><strong>Develop</strong> an Incident Action Plan (IAP) for the operational period</li>
+              <li><strong>Conduct</strong> briefings and coordinate resource deployment</li>
             </ol>
             
-            <p>Schemas can include custom fields, relationships between content types, and validation rules to ensure data quality.</p>
+            <p>The ICS structure consists of five major functional areas: Command, Operations, Planning, Logistics, and Finance/Administration. The system is modular and expands or contracts based on incident needs.</p>
           </div>
           
           <div class="space-y-2 mb-4">
             <p class="text-xs font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Learn more:</p>
-            <a href="doc-page.html" class="block text-sm text-primary-600 dark:text-primary-400 hover:underline">→ Component Schemas Overview</a>
-            <a href="#" class="block text-sm text-primary-600 dark:text-primary-400 hover:underline">→ Schema API Reference</a>
-            <a href="#" class="block text-sm text-primary-600 dark:text-primary-400 hover:underline">→ Building Your First Schema</a>
+            <a href="doc-page.html" class="block text-sm text-primary-600 dark:text-primary-400 hover:underline">→ ICS Overview</a>
+            <a href="#" class="block text-sm text-primary-600 dark:text-primary-400 hover:underline">→ ICS Implementation Procedures</a>
+            <a href="#" class="block text-sm text-primary-600 dark:text-primary-400 hover:underline">→ Unified Command</a>
           </div>
           
           <a href="#" class="inline-flex items-center gap-1 text-xs text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400">
@@ -452,10 +464,10 @@
           <article class="bg-neutral-50 dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-700 p-6 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
             <a href="doc-page.html" class="block group">
               <h3 class="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 mb-2">
-                Component Schemas Overview
+                Incident Command System (ICS) Overview
               </h3>
               <p class="text-sm text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
-                Learn how to define reusable content structures with custom fields, validation rules, and relationships between content types. Component schemas act as templates for your content, ensuring consistency across your system.
+                Comprehensive guide to the Incident Command System structure, roles, and implementation in disaster response operations. Learn about the five major functional areas, command staff, and ICS principles.
               </p>
             </a>
             
@@ -463,20 +475,20 @@
             <div class="flex flex-wrap items-center gap-4 text-xs text-neutral-600 dark:text-neutral-400 mb-4">
               <span class="flex items-center gap-1">
                 <i data-lucide="calendar" class="w-3 h-3"></i>
-                Last updated Feb 1, 2025
+                Last updated Nov 15, 2024
               </span>
               <span class="flex items-center gap-1">
                 <i data-lucide="book-open" class="w-3 h-3"></i>
-                Publication: Discover CX Platform
+                Category: Emergency Response
               </span>
-              <span>5 min read</span>
+              <span>10 min read</span>
             </div>
             
             <!-- Tags -->
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">Core Concepts</span>
-              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded text-xs font-medium">Schemas</span>
-              <span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs font-medium">Content Types</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">Emergency Response</span>
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded text-xs font-medium">ICS</span>
+              <span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs font-medium">Doctrine</span>
             </div>
           </article>
           
@@ -484,10 +496,10 @@
           <article class="bg-neutral-50 dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-700 p-6 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
             <a href="#" class="block group">
               <h3 class="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 mb-2">
-                Schema API Reference
+                ICS Implementation Procedures
               </h3>
               <p class="text-sm text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
-                Complete API documentation for creating, updating, and managing component schemas programmatically. Includes code examples, request/response formats, and error handling.
+                Step-by-step procedures for implementing ICS during an incident, including initial response, assessment, structure establishment, and resource coordination. Includes operational periods and briefings.
               </p>
             </a>
             
@@ -498,19 +510,19 @@
               </button>
               <span class="flex items-center gap-1">
                 <i data-lucide="calendar" class="w-3 h-3"></i>
-                Last updated Jan 28, 2025
+                Last updated Nov 10, 2024
               </span>
               <span class="flex items-center gap-1">
                 <i data-lucide="book-open" class="w-3 h-3"></i>
-                Publication: Discover CX Platform
+                Category: Emergency Response
               </span>
-              <span>Reference</span>
+              <span>8 min read</span>
             </div>
             
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded text-xs font-medium">API Reference</span>
-              <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded text-xs font-medium">REST API</span>
-              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">Schemas</span>
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded text-xs font-medium">Procedure</span>
+              <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded text-xs font-medium">Emergency Response</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">ICS</span>
             </div>
           </article>
           
@@ -518,10 +530,10 @@
           <article class="bg-neutral-50 dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-700 p-6 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
             <a href="#" class="block group">
               <h3 class="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 mb-2">
-                Building Your First Schema
+                Incident Action Plan (IAP) Development
               </h3>
               <p class="text-sm text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
-                Step-by-step tutorial with code examples showing how to create a blog post schema with title, content, and author fields. Perfect for beginners getting started with content modeling.
+                Guide to developing and maintaining written Incident Action Plans for each operational period. Includes objectives, strategies, tactics, and resource assignments.
               </p>
             </a>
             
@@ -532,19 +544,19 @@
               </button>
               <span class="flex items-center gap-1">
                 <i data-lucide="calendar" class="w-3 h-3"></i>
-                Last updated Jan 15, 2025
+                Last updated Oct 28, 2024
               </span>
               <span class="flex items-center gap-1">
                 <i data-lucide="book-open" class="w-3 h-3"></i>
-                Publication: Discover CX Platform
+                Category: Emergency Response
               </span>
-              <span>12 min</span>
+              <span>12 min read</span>
             </div>
             
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs font-medium">Tutorial</span>
-              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">Getting Started</span>
-              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded text-xs font-medium">Schemas</span>
+              <span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs font-medium">Planning</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">ICS</span>
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded text-xs font-medium">Procedures</span>
             </div>
           </article>
           
@@ -552,10 +564,10 @@
           <article class="bg-neutral-50 dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-700 p-6 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
             <a href="#" class="block group">
               <h3 class="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 mb-2">
-                Schema Field Types
+                Unified Command Procedures
               </h3>
               <p class="text-sm text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
-                Reference for all available field types including text, rich text, media, relationships, and custom validators. Understand which field type to use for different content needs.
+                Procedures for implementing Unified Command when multiple agencies have incident jurisdiction. Includes coordination between Red Cross, FEMA, and local emergency management.
               </p>
             </a>
             
@@ -566,19 +578,87 @@
               </button>
               <span class="flex items-center gap-1">
                 <i data-lucide="calendar" class="w-3 h-3"></i>
-                Last updated Dec 20, 2024
+                Last updated Oct 15, 2024
               </span>
               <span class="flex items-center gap-1">
                 <i data-lucide="book-open" class="w-3 h-3"></i>
-                Publication: Discover CX Platform
+                Category: Emergency Response
               </span>
-              <span>Reference</span>
+              <span>7 min read</span>
             </div>
             
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded text-xs font-medium">Reference</span>
-              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">Field Types</span>
-              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded text-xs font-medium">Schemas</span>
+              <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded text-xs font-medium">Coordination</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">ICS</span>
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded text-xs font-medium">Multi-Agency</span>
+            </div>
+          </article>
+          
+          <!-- Result 5 -->
+          <article class="bg-neutral-50 dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-700 p-6 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
+            <a href="#" class="block group">
+              <h3 class="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 mb-2">
+                ICS Resource Management
+              </h3>
+              <p class="text-sm text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                Comprehensive guide to resource management in ICS, including identifying requirements, ordering resources, tracking status, and demobilization procedures.
+              </p>
+            </a>
+            
+            <div class="flex flex-wrap items-center gap-4 text-xs text-neutral-600 dark:text-neutral-400 mb-4">
+              <button class="flex items-center gap-1 hover:text-primary-600 dark:hover:text-primary-400">
+                <i data-lucide="download" class="w-3 h-3"></i>
+                <span>Download PDF</span>
+              </button>
+              <span class="flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3"></i>
+                Last updated Sep 30, 2024
+              </span>
+              <span class="flex items-center gap-1">
+                <i data-lucide="book-open" class="w-3 h-3"></i>
+                Category: Logistics
+              </span>
+              <span>9 min read</span>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded text-xs font-medium">Logistics</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">Resource Management</span>
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded text-xs font-medium">ICS</span>
+            </div>
+          </article>
+          
+          <!-- Result 6 -->
+          <article class="bg-neutral-50 dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-700 p-6 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
+            <a href="#" class="block group">
+              <h3 class="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 mb-2">
+                ICS Command Staff Roles
+              </h3>
+              <p class="text-sm text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">
+                Detailed descriptions of Command Staff positions including Incident Commander, Public Information Officer, Safety Officer, and Liaison Officer responsibilities and duties.
+              </p>
+            </a>
+            
+            <div class="flex flex-wrap items-center gap-4 text-xs text-neutral-600 dark:text-neutral-400 mb-4">
+              <button class="flex items-center gap-1 hover:text-primary-600 dark:hover:text-primary-400">
+                <i data-lucide="download" class="w-3 h-3"></i>
+                <span>Download PDF</span>
+              </button>
+              <span class="flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3"></i>
+                Last updated Sep 20, 2024
+              </span>
+              <span class="flex items-center gap-1">
+                <i data-lucide="book-open" class="w-3 h-3"></i>
+                Category: Emergency Response
+              </span>
+              <span>6 min read</span>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-xs font-medium">Command Staff</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">ICS</span>
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded text-xs font-medium">Roles</span>
             </div>
           </article>
           
@@ -613,39 +693,39 @@
             <svg class="w-8 h-8 text-primary-400" viewBox="0 0 32 32" fill="currentColor">
               <path d="M16 2L3 9v14l13 7 13-7V9L16 2zm0 3.24L25.08 9 16 13.76 6.92 9 16 5.24zM5 10.92l10 5.38v10.46l-10-5.38V10.92zm12 15.84V16.3l10-5.38v10.46l-10 5.38z"/>
             </svg>
-            <span class="font-bold text-lg">Discover CX</span>
+            <span class="font-bold text-lg">Training Library</span>
           </div>
         </div>
         <div>
-          <h3 class="font-semibold mb-4">Products</h3>
+          <h3 class="font-semibold mb-4">Categories</h3>
           <div class="space-y-2">
-            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Discover CX Platform</a>
-            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Discover CX</a>
-            <a href="#" class="block text-neutral-400 hover:text-white text-sm">AI Assists</a>
-            <a href="#" class="block text-neutral-400 hover:text-white text-sm">InSite Search</a>
+            <a href="index.html#products" class="block text-neutral-400 hover:text-white text-sm">Emergency Response</a>
+            <a href="#" class="block text-neutral-400 hover:text-white text-sm">First Aid</a>
+            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Safety Protocols</a>
+            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Training Materials</a>
           </div>
         </div>
         <div>
           <h3 class="font-semibold mb-4">Resources</h3>
           <div class="space-y-2">
-            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Documentation</a>
-            <a href="#" class="block text-neutral-400 hover:text-white text-sm">API Reference</a>
-            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Knowledge Base</a>
-            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Blog</a>
+            <a href="doc-page.html" class="block text-neutral-400 hover:text-white text-sm">Policy Documents</a>
+            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Training Videos</a>
+            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Procedure Manuals</a>
+            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Quick Reference Guides</a>
           </div>
         </div>
         <div>
-          <h3 class="font-semibold mb-4">Company</h3>
+          <h3 class="font-semibold mb-4">Support</h3>
           <div class="space-y-2">
-            <a href="#" class="block text-neutral-400 hover:text-white text-sm">About Us</a>
-            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Careers</a>
-            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Contact Sales</a>
-            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Support</a>
+            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Contact Support</a>
+            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Training Resources</a>
+            <a href="#" class="block text-neutral-400 hover:text-white text-sm">FAQs</a>
+            <a href="#" class="block text-neutral-400 hover:text-white text-sm">Privacy Policy</a>
           </div>
         </div>
       </div>
       <div class="border-t border-neutral-800 mt-8 pt-8 text-sm text-neutral-400">
-        © 2025 Discover CX by Ingeniux. All rights reserved.
+        © 2025 American Red Cross. All rights reserved.
       </div>
     </div>
   </footer>

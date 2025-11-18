@@ -1,16 +1,16 @@
-# IGX Documentation Portal Templates
+# American Red Cross Training Library Portal
 
 ## Overview
-Static HTML/Tailwind CSS templates for IGX Technology documentation portal with AI-powered features.
+Static HTML/Tailwind CSS templates for the American Red Cross Training Library portal. This portal provides access to disaster relief policies, procedures, and doctrine files for first responders and emergency personnel.
 
 ## Files Included
 
 ### Core Templates
-- **`index.html`** - Home page with hero, search, AI features showcase
-- **`doc-page.html`** - Documentation article page (3-column layout) ⏳ *In Progress*
-- **`product.html`** - Product overview page ⏳ *In Progress*
-- **`profile.html`** - User profile page ⏳ *In Progress*
-- **`ai-search.html`** - AI-powered search results ⏳ *In Progress*
+- **`index.html`** - Training Library home page with document cards, categories, and search
+- **`doc-page.html`** - Doctrine document page with policy and procedure content
+- **`user-profile.html`** - User profile page for first responders
+- **`search-results.html`** - Search results page for training materials
+- **`login.html`** - Login page for authenticated access
 
 ### Components
 - **`components/header.html`** - Main navigation header
@@ -37,24 +37,24 @@ Static HTML/Tailwind CSS templates for IGX Technology documentation portal with 
 
 2. **Open in Browser**
    
-   - Home: http://localhost:8000/index.html
-   - Documentation: http://localhost:8000/doc-page.html
+   - Training Library: http://localhost:8000/index.html
+   - Doctrine Document: http://localhost:8000/doc-page.html
    - User Profile: http://localhost:8000/user-profile.html
    - Search Results: http://localhost:8000/search-results.html
 
 ## Features
 
-### AI-Powered Capabilities
-✨ **AI Search** - Semantic search with AI-generated answers  
-🤖 **AI Chatbot** - 24/7 intelligent assistant  
-💡 **Code Explainer** - Hover over code for AI explanations  
-📝 **Smart Summaries** - Generate article summaries  
-🔊 **Text-to-Voice** - Listen to documentation  
-💬 **Chat with Docs** - Ask questions about current page  
+### Training Library Capabilities
+✨ **Document Search** - Search training materials, procedures, and doctrine files  
+🤖 **AI Assistant** - Ask questions about policies and procedures  
+📚 **Category Organization** - Browse by Emergency Response, First Aid, Safety Protocols, Training Materials, and Logistics  
+📥 **Offline Downloads** - Download documents for offline access  
+📊 **Document Management** - Track downloaded and recently viewed documents  
+🎥 **Video Training** - Access video training materials and demonstrations  
 
 ### Design System
-- **Modern & Clean** - Professional corporate design
-- **AI-First Aesthetic** - Subtle gradients and modern styling
+- **Red Cross Branding** - Official American Red Cross color scheme and styling
+- **Professional & Clean** - Modern design optimized for first responders
 - **Fully Responsive** - Mobile, tablet, and desktop optimized
 - **Accessible** - WCAG 2.1 AA compliant
 - **Dark Mode Ready** - Toggle between light/dark themes
@@ -74,61 +74,56 @@ Static HTML/Tailwind CSS templates for IGX Technology documentation portal with 
 ## Color Palette
 
 ### Brand Colors
-- **Primary Blue**: `#3B7FB7` - Main brand color
-- **AI Purple**: `#7C3AED` - AI features accent
-- **Success Green**: `#10B981`
-- **Warning Orange**: `#F59E0B`
-- **Error Red**: `#EF4444`
+- **Primary Red**: `#DC143C` / `#EF4444` - American Red Cross primary color
+- **Red Shades**: Full red color scale (50-950) for UI elements
+- **Success Green**: `#10B981` - Status indicators
+- **Warning Orange**: `#F59E0B` - Alerts and warnings
+- **Info Blue**: `#3B82F6` - Information and links
 
-### Gradients
-```css
-/* AI Gradient */
-background: linear-gradient(135deg, #7C3AED 0%, #3B7FB7 100%);
-```
+### Category Colors
+- **Emergency Response**: Blue tones
+- **First Aid**: Green tones  
+- **Safety Protocols**: Red tones
+- **Training Materials**: Purple/Indigo tones
+- **Logistics**: Orange/Yellow tones
 
-## Component Usage
+## Information Architecture
 
-### AI Button
-```html
-<button class="btn-ai">
-  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/>
-  </svg>
-  AI Assistant
-</button>
-```
+### Document Categories
+1. **Emergency Response** - Incident Command System, shelter operations, mass casualty procedures
+2. **First Aid** - CPR, medical procedures, triage protocols
+3. **Safety Protocols** - Hazmat response, water rescue, safety procedures
+4. **Training Materials** - Video series, training guides, educational content
+5. **Logistics** - Resource management, supply chain, operational logistics
 
-### AI Badge
-```html
-<span class="ai-badge">
-  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/>
-  </svg>
-  Powered by AI
-</span>
-```
+### Document Types
+- **Policy Documents** - Official Red Cross policies and guidelines
+- **Procedure Manuals** - Step-by-step operational procedures
+- **Training Videos** - Video demonstrations and walkthroughs
+- **Quick Reference Guides** - Emergency procedure quick references
+- **Doctrine Files** - Comprehensive doctrine and best practices
 
-### Code Block with AI
-```html
-<div class="code-block-wrapper group relative">
-  <div class="code-actions">
-    <button class="btn-code-action" title="AI Explain">...</button>
-    <button class="copy-code-btn btn-code-action" title="Copy">...</button>
-  </div>
-  <pre class="code-block"><code class="language-javascript">
-// Your code here
-  </code></pre>
-</div>
-```
+## Sample Content
+
+The portal includes sample training materials such as:
+- Water Rescue Techniques Training Video
+- Hazmat Response Procedures Walkthrough
+- Shelter Setup and Management Training
+- Incident Command System in Action
+- CPR Demonstration Video Series
+- Emergency Communications Protocol
+- Mass Casualty Incident Procedures
+- And more...
 
 ## Customization
 
 ### Update Brand Colors
-Edit `css/custom.css` and update the CSS variables:
+Edit the CSS variables in each HTML file's `<style>` section:
 ```css
 :root {
-  --igx-primary-600: #YOUR_COLOR;
-  --igx-accent-600: #YOUR_COLOR;
+  --color-primary-600: 220 38 38; /* Red Cross red */
+  --color-primary-700: 185 28 28;
+  /* Adjust other color values as needed */
 }
 ```
 
@@ -166,49 +161,81 @@ tailwind.config = {
 
 ## File Structure
 ```
-DCX Demo Templates/
-├── index.html                 ✅ Complete
-├── doc-page.html             ⏳ In Progress
-├── product.html              ⏳ In Progress
-├── profile.html              ⏳ In Progress
-├── ai-search.html            ⏳ In Progress
+RedCross New Template/
+├── index.html                 ✅ Training Library home page
+├── doc-page.html             ✅ Doctrine document page
+├── user-profile.html         ✅ User profile page
+├── search-results.html       ✅ Search results page
+├── login.html                ✅ Login page
 ├── css/
-│   └── custom.css            ✅ Complete
+│   ├── custom.css            ✅ Custom styles
+│   ├── enterprise-theme.css  ✅ Enterprise theme
+│   └── ingeniux-brand.css    ✅ Brand styles
 ├── js/
-│   └── main.js               ✅ Complete
+│   └── main.js               ✅ Core JavaScript
 ├── components/
-│   ├── header.html           ✅ Complete
-│   ├── footer.html           ✅ Complete
-│   ├── sidebar-nav.html      ✅ Complete
-│   ├── ai-chatbot.html       ✅ Complete
-│   ├── code-block.html       ✅ Complete
-│   └── cards.html            ✅ Complete
+│   ├── header.html           ✅ Main navigation header
+│   ├── footer.html           ✅ Site footer
+│   ├── sidebar-nav.html      ✅ Sidebar navigation
+│   ├── ai-chatbot.html       ✅ AI assistant panel
+│   ├── code-block.html       ✅ Code/document blocks
+│   └── cards.html            ✅ Card components
 ├── assets/
-│   ├── images/
-│   └── icons/
-├── DEVELOPMENT_PLAN.md       ✅ Complete
-├── IGX-Docs-Portal-StyleGuide.md  ✅ Complete
+│   ├── images/               ✅ Images and media
+│   └── js/                   ✅ Additional scripts
 └── README.md                 ✅ This file
 ```
 
+## Content Categories
+
+### Emergency Response
+- Incident Command System (ICS)
+- Shelter Operations
+- Mass Casualty Procedures
+- Emergency Communications
+
+### First Aid
+- CPR Procedures
+- Medical Response
+- Triage Protocols
+- First Aid Basics
+
+### Safety Protocols
+- Hazmat Response
+- Water Rescue
+- Safety Procedures
+- Risk Management
+
+### Training Materials
+- Video Training Series
+- Training Guides
+- Educational Content
+- Certification Materials
+
+### Logistics
+- Resource Management
+- Supply Chain
+- Operational Logistics
+- Coordination Procedures
+
 ## Next Steps
 
-1. Complete remaining page templates
-2. Add demo content and images
-3. Implement syntax highlighting for code blocks
-4. Add print styles
-5. Test across devices
-6. Optimize for production
+1. Add additional training materials and documents
+2. Implement document download functionality
+3. Add user authentication and access control
+4. Integrate with Red Cross backend systems
+5. Add analytics and usage tracking
+6. Optimize for production deployment
 
 ## License
-© 2025 IGX Technology. All rights reserved.
+© 2025 American Red Cross. All rights reserved.
 
 ## Support
-For questions or issues, contact: docs@igxtechnology.com
+For questions or issues, contact: training@redcross.org
 
 ---
 
 **Status**: Active Development  
 **Version**: 1.0.0  
-**Last Updated**: October 30, 2025
+**Last Updated**: November 17, 2025
 

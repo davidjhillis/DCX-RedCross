@@ -7,7 +7,7 @@
   // Inject chatbot HTML
   const chatbotHTML = `
     <!-- Floating Chat Button (Bottom Right) -->
-    <button id="chat-toggle-btn" class="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-primary-600 to-blue-600 hover:from-primary-700 hover:to-blue-700 text-white rounded-full shadow-2xl shadow-primary-500/30 flex items-center justify-center transition-all duration-300 hover:scale-110 z-50 group">
+    <button id="chat-toggle-btn" class="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white rounded-full shadow-2xl shadow-primary-500/30 flex items-center justify-center transition-all duration-300 hover:scale-110 z-50 group">
       <i data-lucide="message-circle" class="w-6 h-6 group-[.chat-open]:hidden"></i>
       <i data-lucide="x" class="w-6 h-6 hidden group-[.chat-open]:block"></i>
       <span id="chat-badge" class="hidden absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">1</span>
@@ -29,7 +29,7 @@
         
         <!-- Welcome Message -->
         <div class="flex gap-3">
-          <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary-600 to-blue-600 rounded-full flex items-center justify-center">
+          <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center">
             <span class="text-white text-xs font-bold">RC</span>
           </div>
           <div class="flex-1">
@@ -61,7 +61,7 @@
 
         <!-- Typing Indicator -->
         <div id="typing-indicator" class="hidden flex gap-3">
-          <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary-600 to-blue-600 rounded-full flex items-center justify-center">
+          <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center">
             <span class="text-white text-xs font-bold">RC</span>
           </div>
           <div class="flex-1">
@@ -99,7 +99,7 @@
           </div>
           <button 
             type="submit"
-            class="px-6 py-2.5 bg-gradient-to-r from-primary-600 to-blue-600 hover:from-primary-700 hover:to-blue-700 text-white rounded-lg font-semibold text-sm transition-all shadow-lg shadow-primary-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
+            class="px-6 py-2.5 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white rounded-lg font-semibold text-sm transition-all shadow-lg shadow-primary-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Send
           </button>
@@ -300,7 +300,7 @@
       messageDiv.className = 'flex gap-3 justify-end';
       messageDiv.innerHTML = `
         <div class="flex-1 flex flex-col items-end">
-          <div class="bg-gradient-to-r from-primary-600 to-blue-600 rounded-2xl rounded-tr-none p-4 shadow-sm max-w-[80%]">
+          <div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl rounded-tr-none p-4 shadow-sm max-w-[80%]">
             <p class="text-sm text-white">${escapeHtml(text)}</p>
           </div>
           <div class="flex items-center gap-2 mt-2 text-xs text-neutral-500 dark:text-neutral-400">

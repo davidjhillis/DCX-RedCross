@@ -113,7 +113,7 @@
               <div class="space-y-1">
                 <!-- Result 1 -->
                 <a href="doc-page.html" class="flex items-start gap-3 px-3 py-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors group">
-                  <i data-lucide="file-text" class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5"></i>
+                  <i data-lucide="file-text" class="w-5 h-5 text-primary-600 dark:text-primary-400 flex-shrink-0 mt-0.5"></i>
                   <div class="flex-1 min-w-0">
                     <p class="text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400">Incident Command System (ICS) Overview</p>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-1 line-clamp-2">Comprehensive guide to the Incident Command System structure, roles, and implementation in disaster response operations.</p>
